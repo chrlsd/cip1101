@@ -3,6 +3,10 @@
   <h1>Charles' Portfolio</h1>
   <p><b>CIP 1101: Integrative Programming and Technologies 1</b></p>
   <i>A comprehensive collection of academic courseworks and programming milestones.</i>
+  <br><br>
+  <a href="https://chrlsd.github.io/cip1101/">
+    <img src="https://img.shields.io/badge/Live_Demo-View_Site-red?style=for-the-badge&logo=github" alt="Live Site" />
+  </a>
 </div>
 
 ---
@@ -69,3 +73,38 @@ The portfolio utilizes a clean front end stack to manage and display content eff
   <b>Course:</b> CIP 1101
   <b>Student:</b> Charles Iñigo G. Desuyo
 </header>
+```
+
+<b>JavaScript Functionality</b>  
+The site includes a custom script to manage visibility for different coursework sections:
+
+```javascript
+function toggleSection(id) {
+  const body = document.getElementById('body-' + id);
+  const icon = document.getElementById('icon-' + id);
+  // Logic for collapsing and expanding sections
+}
+```
+
+<b>Visual System</b>  
+A color coded legend is used to identify the type of entry:
+
+  * <kbd>Blue</kbd> : Lectures
+  * <kbd>Yellow</kbd> : Activities
+  * <kbd>Purple</kbd> : Quizzes
+  * <kbd>Orange</kbd> : Examinations
+
+-----
+
+### Accessing the Site
+
+<b>🌐 Online Access</b>  
+The portfolio is hosted via GitHub Pages and can be accessed at:  
+https://chrlsd.github.io/cip1101/
+
+<br>
+
+<div align="center">
+<sub>Developed by <b>Charles Iñigo G. Desuyo</b></sub><br>
+<sub>University of the East</sub>
+</div>
