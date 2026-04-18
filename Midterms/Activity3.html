@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midterm Activity 3 — Image Techniques and Image Maps | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Midterms</a>
+        <span>›</span>
+        <span class="current">Midterm Activity 3</span>
+      </div>
+      <span class="activity-badge">Activity</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Image Techniques and Image Maps</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Midterm Activity 3 (Lecture 6)</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Image Borders</span>
+        <span class="pill">Sizing</span>
+        <span class="pill">Float</span>
+        <span class="pill">Hover Effects</span>
+        <span class="pill">Box Shadow</span>
+        <span class="pill">Shape-Outside</span>
+        <span class="pill">Mask-Image</span>
+        <span class="pill">Image Maps</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <polyline points="21 15 16 10 5 21"/>
+      </svg>
+      <span class="divider-text">Activity Output</span>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Midterm Activity 3</span>
+      <h2>Midterm Lecture 6: Image Techniques and Image Maps</h2>
+    </div>
+
+    <!-- 1. Image with Border -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <span class="card-title">1. Image with 2px Border and Alternative Text (2pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: 2px solid border with descriptive alt text</p>
+        <img
+          src="https://images.unsplash.com/photo-1616386573884-22531fd226e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwxfHx8fDE3NzE0ODA1OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Beautiful mountain landscape with snow-capped peaks under clear blue sky"
+          class="border-image"
+          width="400"
+        >
+      </div>
+    </div>
+
+    <!-- 2. Image with Definite Size -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+        </div>
+        <span class="card-title">2. Image with Definite Size - 5x5 inches (3pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: Width and height set to 5 inches (480px = 5 inches at 96 DPI)</p>
+        <img
+          src="https://images.unsplash.com/photo-1680096025643-d41f6aeff989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwcmVzb3J0fGVufDF8fHx8MTc3MTU0NjAwOXww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Tropical beach resort"
+          width="480"
+          height="480"
+          style="object-fit: cover;"
+        >
+      </div>
+    </div>
+
+    <!-- 3. Rounded Borders -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2H2v10"/><path d="M12 22h10V12"/>
+            <rect x="2" y="12" width="10" height="10" rx="3"/>
+            <rect x="12" y="2" width="10" height="10" rx="3"/>
+          </svg>
+        </div>
+        <span class="card-title">3. Image with Rounded Borders (2pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: border-radius: 15px applied to all corners</p>
+        <img
+          src="https://images.unsplash.com/photo-1764605837259-fa53df647c34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5c2NhcGUlMjB1cmJhbiUyMHNreWxpbmV8ZW58MXx8fHwxNzcxNTYxNzA1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Urban cityscape"
+          class="rounded-image"
+          width="400"
+        >
+      </div>
+    </div>
+
+    <!-- 4. Specific Rounded Corners -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2H2v10"/><path d="M12 22h10V12"/>
+            <rect x="2" y="12" width="10" height="10" rx="3"/>
+            <rect x="12" y="2" width="10" height="10" rx="3"/>
+          </svg>
+        </div>
+        <span class="card-title">4. Image with Specific Rounded Corners (3pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: border-radius: 30px 0 30px 0 (top-left and bottom-right corners rounded)</p>
+        <img
+          src="https://images.unsplash.com/photo-1614638964097-20e7104dea3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjB0cmVlcyUyMHBhdGh3YXl8ZW58MXx8fHwxNzcxNDgxNjE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Forest pathway"
+          class="specific-rounded"
+          width="400"
+        >
+      </div>
+    </div>
+
+    <!-- 5. Image as Link -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <span class="card-title">5. Image as Link to www.ue.edu.ph (2pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: Clickable image linking to external URL</p>
+        <a href="https://www.ue.edu.ph" target="_blank" rel="noreferrer">
+          <img
+            src="https://images.unsplash.com/photo-1604580826271-aa59d10b875a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHdhdmVzJTIwc3Vuc2V0fGVufDF8fHx8MTc3MTU1OTYyNXww&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Click to visit UE website - Ocean sunset"
+            width="400"
+            style="cursor: pointer; border: 1px solid #ccc;"
+          >
+        </a>
+        <p style="margin-top: 10px; font-size: 14px;">Click the image to visit the University of the East website</p>
+      </div>
+    </div>
+
+    <!-- 6. Float -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="15" y2="12"/>
+            <line x1="3" y1="18" x2="18" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-title">6. Image with Float Application (2pts)</span>
+      </div>
+      <div class="card-body clearfix">
+        <p class="note">Specification: <strong>Float: left</strong> - Image floats to the left with text wrapping around it</p>
+        <img
+          src="https://images.unsplash.com/photo-1616386573884-22531fd226e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGxhbmRzY2FwZSUyMG5hdHVyZXxlbnwxfHx8fDE3NzE0ODA1OTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Mountain landscape"
+          class="float-left"
+          width="300"
+        >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+      </div>
+    </div>
+
+    <!-- 7. Hover Effect -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+        </div>
+        <span class="card-title">7. Image with CSS Hover Effect (3pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: <strong>Transform: scale(1.1) and Filter: brightness(1.2)</strong> - Image scales up and brightens on hover</p>
+        <img
+          src="https://images.unsplash.com/photo-1680096025643-d41f6aeff989?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMGJlYWNoJTIwcmVzb3J0fGVufDF8fHx8MTc3MTU0NjAwOXww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Tropical beach"
+          class="hover-effect"
+          width="400"
+        >
+        <p style="margin-top: 10px; font-size: 14px;">Hover over the image to see the scaling and brightness effect</p>
+      </div>
+    </div>
+
+    <!-- 8. Box Shadow -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="16" height="16" rx="2"/>
+            <rect x="6" y="6" width="16" height="16" rx="2"/>
+          </svg>
+        </div>
+        <span class="card-title">8. Image with CSS Box Shadow Effect (2pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: <strong>box-shadow: 0 10px 30px rgb(0 0 0 / 0.3), 0 5px 15px rgb(0 0 0 / 0.2)</strong> - Multiple layered shadows for depth</p>
+        <img
+          src="https://images.unsplash.com/photo-1764605837259-fa53df647c34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5c2NhcGUlMjB1cmJhbiUyMHNreWxpbmV8ZW58MXx8fHwxNzcxNTYxNzA1fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Cityscape"
+          class="shadow-effect"
+          width="400"
+        >
+      </div>
+    </div>
+
+    <!-- 9. Shape-Outside Circle -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+          </svg>
+        </div>
+        <span class="card-title">9. Image with Shape-Outside Application - Circle (3pts)</span>
+      </div>
+      <div class="card-body clearfix">
+        <p class="note">Specification: <strong>shape-outside: circle(50%)</strong> - Circular shape with text wrapping around it</p>
+        <img
+          src="https://images.unsplash.com/photo-1614638964097-20e7104dea3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmb3Jlc3QlMjB0cmVlcyUyMHBhdGh3YXl8ZW58MXx8fHwxNzcxNDgxNjE4fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Forest trees"
+          class="shape-circle"
+        >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
+      </div>
+    </div>
+
+    <!-- 10. Shape-Outside Polygon -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l10 8-10 12L2 10z"/>
+          </svg>
+        </div>
+        <span class="card-title">10. Image with Shape-Outside Application - Polygon (3pts)</span>
+      </div>
+      <div class="card-body clearfix">
+        <p class="note">Specification: <strong>shape-outside: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)</strong> - Diamond/rhombus shape with text wrapping</p>
+        <img
+          src="https://images.unsplash.com/photo-1604580826271-aa59d10b875a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvY2VhbiUyMHdhdmVzJTIwc3Vuc2V0fGVufDF8fHx8MTc3MTU1OTYyNXww&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Ocean waves"
+          class="shape-polygon"
+        >
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+      </div>
+    </div>
+
+    <!-- 11. Mask-Image -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <span class="card-title">11. Image with Mask-Image Property (5pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: <strong>mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)</strong> - Gradient mask with text overlay</p>
+        <p>Favorite Place: Tagaytay, Philippines</p>
+        <div class="mask-container">
+          <div class="text-overlay">CHARLES IÑIGO G. DESUYO</div>
+          <img
+            src="images/tagaytay.jpg"
+            alt="Tagaytay, Philippines - my favorite place"
+            class="masked-image"
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Image Map Shapes -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <span class="card-title">12. Image Map with Different Shapes - Circle, Rectangle, and Triangle (15pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: Demonstrating different shape types in an image map (circle, rect, and poly for triangle)</p>
+        <p class="note"><strong>Instructions:</strong> Hover over and click on the Red Circle, Green Square, or Blue Triangle to visit their dedicated pages</p>
+
+        <div class="image-map-container" style="width: 700px; height: 400px;">
+          <!-- Base image -->
+          <img
+            src="images/shapes.png"
+            alt="Geometric shapes - Circle, Rectangle, and Triangle"
+            width="700"
+            style="position: absolute; top: 0; left: 0; z-index: 1;"
+          >
+
+          <!-- Red Circle - clickable area -->
+          <a
+            href="circle.html"
+            class="shape-link"
+            style="left: 38px; top: 123px; width: 154px; height: 154px; border-radius: 50%; z-index: 4;"
+          ></a>
+
+          <!-- Green Square - clickable area -->
+          <a
+            href="square.html"
+            class="shape-link"
+            style="left: 273px; top: 123px; width: 154px; height: 154px; z-index: 4;"
+          ></a>
+
+          <!-- Blue Triangle - clickable area -->
+          <a
+            href="triangle.html"
+            class="shape-link"
+            style="left: 508px; top: 123px; width: 154px; height: 154px; z-index: 4;"
+          ></a>
+
+          <!-- Red Circle overlay -->
+          <img
+            src="images/red-circle.png"
+            alt="Red circle"
+            class="shape-overlay circle-overlay"
+            width="700"
+            style="z-index: 3;"
+          >
+
+          <!-- Green Square overlay -->
+          <img
+            src="images/green-square.png"
+            alt="Green square"
+            class="shape-overlay square-overlay"
+            width="700"
+            style="z-index: 3;"
+          >
+
+          <!-- Blue Triangle overlay -->
+          <img
+            src="images/blue-triangle.png"
+            alt="Blue triangle"
+            class="shape-overlay triangle-overlay"
+            width="700"
+            style="z-index: 3;"
+          >
+        </div>
+
+        <div class="image-map-details">
+          <strong>Image Map Shape Details:</strong>
+          <ul>
+            <li><strong>Circle (Red):</strong> shape="circle" coords="x,y,radius" - Opens Circle Page - Hover to see glow effect!</li>
+            <li><strong>Rectangle (Green):</strong> shape="rect" coords="x1,y1,x2,y2" - Opens Square Page - Hover to see glow effect!</li>
+            <li><strong>Triangle (Blue/Purple):</strong> shape="poly" coords="x1,y1,x2,y2,x3,y3" - Opens Triangle Page - Hover to see glow effect!</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Image Map Logos -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <span class="card-title">13. Image Map with 2 Links Inside (15pts)</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Specification: Interactive image map with clickable brand logos</p>
+        <p class="note"><strong>Instructions:</strong> Hover over and click on the Apple logo to visit Apple's iPhone page, or the Google logo to visit the Google Store</p>
+
+        <div class="brand-logos-container" style="position: relative; display: inline-block; width: 742px; height: 416px;">
+          <!-- Base combined image -->
+          <img
+            src="images/apple-google-logos.png"
+            alt="Apple and Google logos"
+            width="742"
+            style="position: absolute; top: 0; left: 0; z-index: 1; width: 100%; height: 100%; object-fit: contain;"
+          >
+
+          <!-- Apple logo - clickable area -->
+          <a
+            href="https://www.apple.com/iphone/"
+            target="_blank"
+            rel="noreferrer"
+            class="logo-link"
+            style="position: absolute; left: 63px; top: 93px; width: 230px; height: 230px; z-index: 2;"
+          ></a>
+
+          <!-- Google logo - clickable area -->
+          <a
+            href="https://store.google.com/us/?hl=en-US"
+            target="_blank"
+            rel="noreferrer"
+            class="logo-link"
+            style="position: absolute; left: 449px; top: 93px; width: 230px; height: 230px; z-index: 2;"
+          ></a>
+
+          <!-- Apple overlay -->
+          <img
+            src="images/apple-logo.png"
+            alt="Apple logo"
+            class="logo-overlay apple-overlay"
+            width="600"
+            style="position: absolute; width: 100%; height: 100%; object-fit: contain;"
+          >
+
+          <!-- Google overlay -->
+          <img
+            src="images/google-logo.png"
+            alt="Google logo"
+            class="logo-overlay google-overlay"
+            width="600"
+            style="position: absolute; width: 100%; height: 100%; object-fit: contain;"
+          >
+        </div>
+
+        <div class="image-map-details">
+          <strong>Image Map Details:</strong>
+          <ul>
+            <li><strong>Link 1:</strong> Apple logo (left) - Links to Apple's iPhone page</li>
+            <li><strong>Link 2:</strong> Google logo (right) - Links to Google Store for Pixel smartphones</li>
+            <li><strong>Hover Effect:</strong> Logos display drop shadow on hover</li>
+            <li><strong>Transition:</strong> Smooth 0.3s ease animation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

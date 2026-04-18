@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 2 — HTML Structures | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Prelims</a>
+        <span>›</span>
+        <span class="current">Lecture 2</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">HTML Structures</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Lecture 2</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Elements</span>
+        <span class="pill">Attributes</span>
+        <span class="pill">Semantic Elements</span>
+        <span class="pill">Section &amp; Article</span>
+        <span class="pill">Figure &amp; Aside</span>
+        <span class="pill">Headings</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+      <span class="divider-text">Lecture Notes &amp; Examples</span>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Lecture 2</span>
+      <h2>HTML Elements &amp; Semantic Structure</h2>
+    </div>
+
+    <!-- 1. Elements -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span class="card-title">Elements</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          HTML <strong>elements</strong> are the building blocks of HTML pages. An element is defined by a start tag, some content, and an end tag: <code>&lt;tagname&gt;content&lt;/tagname&gt;</code>. Some elements (like <code>&lt;br&gt;</code>) have no content and are called <em>empty elements</em>.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-cmt">&lt;!-- Example Elements --&gt;</span>
+<span class="token-tag">&lt;h1&gt;</span><span class="token-txt">This is an example header.</span><span class="token-tag">&lt;/h1&gt;</span>
+<span class="token-tag">&lt;p&gt;</span><span class="token-txt">This is an example paragraph.</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;br&gt;</span> <span class="token-cmt">&lt;!-- This is for page breaks. --&gt;</span>
+<span class="token-tag">&lt;p&gt;</span><span class="token-txt">Above is an example for page breaks.</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p&gt;</span><span class="token-txt">HTML is not case sensitive.</span><span class="token-tag">&lt;/p&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <h1>This is an example header.</h1>
+            <p>This is an example paragraph.</p>
+            <br>
+            <p>Above is an example for page breaks.</p>
+            <p>HTML is not case sensitive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Attributes -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/>
+            <line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title">Attributes</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          HTML <strong>attributes</strong> provide additional information about elements. They are always specified in the start tag and usually come in name/value pairs like <code>name="value"</code>. The <code>style</code> attribute is used to add inline CSS styling.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-cmt">&lt;!-- Example Attributes --&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">style</span>=<span class="token-val">"color:red;"</span><span class="token-tag">&gt;</span><span class="token-txt">This is a red paragraph.</span><span class="token-tag">&lt;/p&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <p style="color:red;">This is a red paragraph.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Semantic Elements -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="9" y1="21" x2="9" y2="9"/>
+          </svg>
+        </div>
+        <span class="card-title">Semantic Elements</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          Semantic HTML elements clearly describe their meaning to both the browser and the developer. In <strong>HTML4</strong>, non-semantic wrappers like <code>&lt;div id="nav"&gt;</code> were used. In <strong>HTML5</strong>, dedicated semantic tags like <code>&lt;nav&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> replace them.
+        </p>
+        <div class="compare">
+          <div class="compare-cell">
+            <div class="compare-cell-label old">HTML4 (Old)</div>
+            <pre><span class="token-tag">&lt;div</span> <span class="token-attr">id</span>=<span class="token-val">"nav"</span><span class="token-tag">&gt;</span>
+  ...
+<span class="token-tag">&lt;/div&gt;</span></pre>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-cell-label new">HTML5 (New)</div>
+            <pre><span class="token-tag">&lt;nav&gt;</span>
+  ...
+<span class="token-tag">&lt;/nav&gt;</span></pre>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>HTML5 introduced semantic elements so you can now type <code>&lt;nav&gt;</code> directly without wrapping it in a <code>&lt;div&gt;</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Section -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+          </svg>
+        </div>
+        <span class="card-title">Section Element — <code style="font-size:0.78rem;">&lt;section&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;section&gt;</code> element defines a thematic grouping of content, typically with a heading. Sections and articles <em>can be nested inside each other</em>.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;section&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span><span class="token-txt">WWF</span><span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">The World Wide Fund for Nature is...</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/section&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <section>
+              <h1>WWF</h1>
+              <p>The World Wide Fund for Nature is...</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Article -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <span class="card-title">Article Element — <code style="font-size:0.78rem;">&lt;article&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;article&gt;</code> element represents a self-contained composition in a document — such as a news article, blog post, or forum post — that is independently distributable or reusable.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;article&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span><span class="token-txt">What Does WWF do?</span><span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">WWF's mission is to stop the degradation of our planet's...</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/article&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <article>
+              <h1>What Does WWF do?</h1>
+              <p>WWF's mission is to stop the degradation of our planet's...</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Header -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <span class="card-title">Header Element — <code style="font-size:0.78rem;">&lt;header&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;header&gt;</code> element represents introductory content or a set of navigational links. It typically contains heading tags, a logo, or authorship information.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;article&gt;</span>
+  <span class="token-tag">&lt;header&gt;</span>
+    <span class="token-tag">&lt;h1&gt;</span><span class="token-txt">What is a book?</span><span class="token-tag">&lt;/h1&gt;</span>
+    <span class="token-tag">&lt;p&gt;</span><span class="token-txt">Book</span><span class="token-tag">&lt;/p&gt;</span>
+  <span class="token-tag">&lt;/header&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">A book is...</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/article&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <article>
+              <header>
+                <h1>What is a book?</h1>
+                <p>Book</p>
+              </header>
+              <p>A book is...</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Footer -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-title">Footer Element — <code style="font-size:0.78rem;">&lt;footer&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;footer&gt;</code> element defines a footer for a document or section. It typically contains authorship information, copyright data, or contact links.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;footer&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">Posted by: Hege Refsnes</span><span class="token-tag">&lt;/p&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">Contact: </span><span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"mailto:someone@example.com"</span><span class="token-tag">&gt;</span><span class="token-txt">someone@example.com</span><span class="token-tag">&lt;/a&gt;&lt;/p&gt;</span>
+<span class="token-tag">&lt;/footer&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <footer>
+              <p>Posted by: Hege Refsnes</p>
+              <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Navigation -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <span class="card-title">Navigation Element — <code style="font-size:0.78rem;">&lt;nav&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;nav&gt;</code> element defines a set of navigation links. It is intended for major navigational blocks — not all links need to be inside a <code>&lt;nav&gt;</code> element.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;nav&gt;</span>
+  <span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"/html/"</span><span class="token-tag">&gt;</span><span class="token-txt">HTML</span><span class="token-tag">&lt;/a&gt;</span>
+  <span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"/css"</span><span class="token-tag">&gt;</span><span class="token-txt">CSS</span><span class="token-tag">&lt;/a&gt;</span>
+  <span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"/js"</span><span class="token-tag">&gt;</span><span class="token-txt">JavaScript</span><span class="token-tag">&lt;/a&gt;</span>
+  <span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"/jquery/"</span><span class="token-tag">&gt;</span><span class="token-txt">jQuery</span><span class="token-tag">&lt;/a&gt;</span>
+<span class="token-tag">&lt;/nav&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <nav>
+              <a href="/html/">HTML</a>
+              <a href="/css">CSS</a>
+              <a href="/js">JavaScript</a>
+              <a href="/jquery/">jQuery</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Aside -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="9" y1="3" x2="9" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title">Aside Element — <code style="font-size:0.78rem;">&lt;aside&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;aside&gt;</code> element defines content that is placed aside from the main content. It should be indirectly related to the surrounding content, such as a sidebar or callout.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;p&gt;</span><span class="token-txt">What is a book?</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;aside&gt;</span>
+  <span class="token-tag">&lt;h4&gt;</span><span class="token-txt">Book</span><span class="token-tag">&lt;/h4&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span><span class="token-txt">A book is a medium for...</span><span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/aside&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <p>What is a book?</p>
+            <aside>
+              <h4>Book</h4>
+              <p>A book is a medium for...</p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Figure -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <span class="card-title">Figure — <code style="font-size:0.78rem;">&lt;figure&gt;</code> &amp; <code style="font-size:0.78rem;">&lt;figcaption&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;figure&gt;</code> element specifies self-contained content like images, diagrams, or code snippets. The <code>&lt;figcaption&gt;</code> element provides a caption for the figure.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;figure&gt;</span>
+  <span class="token-tag">&lt;img</span> <span class="token-attr">src</span>=<span class="token-val">"wrx.jpg"</span> <span class="token-attr">alt</span>=<span class="token-val">"WRX"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;figcaption&gt;</span><span class="token-txt">Fig1. --- This is an old WRX model</span><span class="token-tag">&lt;/figcaption&gt;</span>
+<span class="token-tag">&lt;/figure&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <figure>
+              <img src="https://images.classic.com/vehicles/24313e754b61b90ce06d4b2f0a1d44a619ea7af4.jpg?auto=format&fit=crop&w=600&h=384" alt="WRX">
+              <figcaption>Fig1. &mdash; This is an old WRX model</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lecture 3 part -->
+    <div class="part-heading" style="margin-top:0.5rem;">
+      <span class="part-num">Lecture 3</span>
+      <h2>Paragraphs &amp; Headings</h2>
+    </div>
+
+    <!-- 11. Paragraph -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/>
+            <line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-title">Paragraph Element — <code style="font-size:0.78rem;">&lt;p&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;p&gt;</code> element defines a paragraph. Browsers automatically add some white space (margin) before and after paragraphs. A paragraph is composed of two or more sentences.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;p&gt;</span>
+  <span class="token-txt">This is a sentence. A paragraph is composed of two or more sentences.
+  So now, I am a paragraph! Wow!</span>
+<span class="token-tag">&lt;/p&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <p>This is a sentence. A paragraph is composed of two or more sentences. So now, I am a paragraph! Wow!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Headings -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h7"/>
+          </svg>
+        </div>
+        <span class="card-title">Heading Elements — <code style="font-size:0.78rem;">&lt;h1&gt;</code> to <code style="font-size:0.78rem;">&lt;h6&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          HTML defines six levels of headings. <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> is the least. Headings are important for SEO — search engines use them to index the structure and content of web pages.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;h1&gt;</span><span class="token-txt">Heading 1</span><span class="token-tag">&lt;/h1&gt;</span>
+<span class="token-tag">&lt;h2&gt;</span><span class="token-txt">Heading 2</span><span class="token-tag">&lt;/h2&gt;</span>
+<span class="token-tag">&lt;h3&gt;</span><span class="token-txt">Heading 3</span><span class="token-tag">&lt;/h3&gt;</span>
+<span class="token-tag">&lt;h4&gt;</span><span class="token-txt">Heading 4</span><span class="token-tag">&lt;/h4&gt;</span>
+<span class="token-tag">&lt;h5&gt;</span><span class="token-txt">Heading 5</span><span class="token-tag">&lt;/h5&gt;</span>
+<span class="token-tag">&lt;h6&gt;</span><span class="token-txt">Heading 6</span><span class="token-tag">&lt;/h6&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+            <h4>Heading 4</h4>
+            <h5>Heading 5</h5>
+            <h6>Heading 6</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

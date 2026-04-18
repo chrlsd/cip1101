@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 1 — Web Design Components | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Prelims</a>
+        <span>›</span>
+        <span class="current">Lecture 1</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Web Design Components</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Prelim Lecture 1</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Grids</span>
+        <span class="pill">Call to Action</span>
+        <span class="pill">Breadcrumb</span>
+        <span class="pill">Search Bar</span>
+        <span class="pill">Icons</span>
+        <span class="pill">Modal</span>
+        <span class="pill">Typography</span>
+        <span class="pill">Colors</span>
+        <span class="pill">Usability</span>
+        <span class="pill">Consistency</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Divider ── -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      </svg>
+      <span class="divider-text">Lecture Notes</span>
+    </div>
+  </div>
+
+  <!-- ── Main ── -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Prelim Lecture 1</span>
+      <h2>Good Design Components</h2>
+    </div>
+
+    <!-- ══════════════════════════ 1. GRIDS ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <span class="card-title">Grids</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Grids provide the underlying structure of a website. They ensure that elements like images, text blocks, and buttons are aligned and proportional. Without a grid, a design often feels chaotic and unprofessional.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use a standard 12 column grid for flexibility across desktop and mobile.</li>
+          <li>Maintain consistent gutters (the space between columns) to give content room to breathe.</li>
+          <li>Align elements to the grid lines to create a sense of visual harmony.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">A grid creates predictability. When a user navigates a page where elements are aligned, their eyes can scan the information more efficiently. This reduces the effort required to process the layout.</p>
+
+        <img src="images/screenshot-pinterest.png" alt="Screenshot of Pinterest" class="website-screenshot">
+        <p class="lect1-sub">Website: Pinterest</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> Pinterest is a masterclass in the masonry grid. Despite having items of different heights, the vertical columns remain consistent. It allows for a massive amount of content to be displayed without looking cluttered.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 2. CALL TO ACTION ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m4 4 7.07 17 2.51-7.39L21 11.07z"/>
+          </svg>
+        </div>
+        <span class="card-title">Call to Action (CTA)</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">A CTA is the bridge between a user browsing and a user taking action. It is the primary tool for conversions, whether that is signing up for a newsletter or making a purchase.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use high contrast colors that make the button stand out from the background.</li>
+          <li>Write action-oriented text like <strong>Get Started</strong> or <strong>Join Now</strong> instead of generic words like <strong>Submit</strong>.</li>
+          <li>Place CTAs in prominent areas, such as the top right of the header or the center of the hero section.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Clear CTAs remove ambiguity. A visitor should never have to wonder what they are supposed to do next. A well designed CTA provides a clear path forward, reducing frustration.</p>
+
+        <img src="images/screenshot-netflix.png" alt="Screenshot of Netflix" class="website-screenshot">
+        <p class="lect1-sub">Website: Netflix</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> Their landing page is focused almost entirely on one CTA: <strong>Get Started</strong>. The bright red button on a dark background is impossible to miss, and the language is direct and inviting.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 3. BREADCRUMB ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </div>
+        <span class="card-title">Breadcrumb</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Breadcrumbs are secondary navigation schemes that reveal the user's location in a website or web application. They are essential for sites with deep hierarchical structures.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use them as a supplement to, not a replacement for, the primary navigation menu.</li>
+          <li>Use a simple separator like a greater than symbol (&gt;) or a slash (/).</li>
+          <li>The current page should be the last item in the breadcrumb and should not be a clickable link.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Breadcrumbs allow users to understand where they are within the site hierarchy. They provide a "one click" way to navigate back to higher level categories, which is much faster than using the back button repeatedly.</p>
+
+        <img src="images/screenshot-amazon.png" alt="Screenshot of Amazon" class="website-screenshot">
+        <p class="lect1-sub">Website: Amazon</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> When browsing products, Amazon uses breadcrumbs to show exactly which category and subcategory you are in. It makes it easy to jump back to a broader category to continue shopping.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 4. SEARCH BAR ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </div>
+        <span class="card-title">Search Bar</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">For many users, the search bar is the primary way they interact with a site. It is a shortcut for those who know exactly what they want and do not want to click through menus.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Make the search bar visible and easily accessible, typically in the top right or center of the header.</li>
+          <li>Include a magnifying glass icon, which is the universal symbol for search.</li>
+          <li>Use placeholder text like <strong>Search for products...</strong> to guide the user.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">It saves time. By providing a direct route to specific content, the search bar empowers the user and makes the site feel more responsive to their needs.</p>
+
+        <img src="images/screenshot-google.png" alt="Screenshot of Google" class="website-screenshot">
+        <p class="lect1-sub">Website: Google</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> The search bar is the entire focus of the page. It is simple, clean, and functional. There are no distractions, ensuring the user achieves their goal immediately.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 5. ICONS ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <span class="card-title">Icons</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Icons are visual metaphors that help users navigate an interface. They save space and can bridge language barriers by using universal symbols.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use recognizable icons (e.g., a house for home, a gear for settings).</li>
+          <li>Keep the style consistent (e.g., all outlined or all solid).</li>
+          <li>Pair icons with text labels when the icon's meaning might be ambiguous.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Icons act as visual cues that the brain processes faster than text. They make the interface feel more intuitive and modern while helping to organize content visually.</p>
+
+        <img src="images/screenshot-apple.png" alt="Screenshot of Apple" class="website-screenshot">
+        <p class="lect1-sub">Website: Apple</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> Apple uses minimalist, highly polished icons that are consistent across their entire ecosystem. Their meaning is immediately clear, contributing to a premium feel.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 6. MODAL ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title">Modal</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">A modal is a window that appears on top of the main page content, requiring the user to interact with it before they can return to the main site. It is used to capture attention or request specific information.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Provide a clear and easy way to close the modal, such as an <strong>X</strong> button in the corner.</li>
+          <li>Dim the background content to keep the focus on the modal.</li>
+          <li>Use them sparingly to avoid annoying the user.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Modals are effective for keeping the user in the same context. For example, a login modal allows a user to sign in without being redirected to a completely different page, maintaining their flow.</p>
+
+        <img src="images/screenshot-airbnb.png" alt="Screenshot of Airbnb" class="website-screenshot">
+        <p class="lect1-sub">Website: Airbnb</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> Their login and signup modals are clean and centered. They dim the background effectively, making it clear that the user needs to complete the login task before continuing.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 7. TYPOGRAPHY ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 7 4 4 20 4 20 7"/>
+            <line x1="9" y1="20" x2="15" y2="20"/>
+            <line x1="12" y1="4" x2="12" y2="20"/>
+          </svg>
+        </div>
+        <span class="card-title">Typography</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Typography is more than just picking a font. It involves the arrangement, size, and spacing of text. It defines the voice of the brand and ensures content is readable.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Limit the number of different fonts to two or three.</li>
+          <li>Use a clear visual hierarchy (e.g., H1 for main titles, H2 for subheadings).</li>
+          <li>Ensure there is enough line height and letter spacing for comfortable reading.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Good typography prevents eye strain. If text is easy to read and logically organized, users are more likely to stay on the page and consume the content.</p>
+
+        <img src="images/screenshot-nytimes.png" alt="Screenshot of The New York Times" class="website-screenshot">
+        <p class="lect1-sub">Website: The New York Times</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> They use a mix of serif and sans serif fonts to create a sophisticated, journalistic feel. The hierarchy is perfect: you always know what is a headline versus a caption.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 8. COLORS ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <span class="card-title">Colors</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Colors evoke emotion and reinforce branding. They are also functional tools used to highlight important information or indicate status (like green for success or red for error).</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use the 60-30-10 rule: 60% dominant color, 30% secondary, and 10% accent.</li>
+          <li>Ensure high contrast between text and background for accessibility.</li>
+          <li>Use a consistent color palette throughout the site.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Color helps guide the user's eye to important areas. It also sets the mood for the experience. A spa website might use calming blues, while a sale site might use urgent oranges and reds.</p>
+
+        <img src="images/screenshot-duolingo.png" alt="Screenshot of Duolingo" class="website-screenshot">
+        <p class="lect1-sub">Website: Duolingo</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> They use a bright, playful color palette that makes learning feel like a game. The colors are consistent across the web and mobile versions, reinforcing their brand identity.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 9. USABILITY ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <span class="card-title">Usability</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Usability refers to how easy and satisfying a website is to use. It is the overall measure of how effectively a user can achieve their goals on the site.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Keep the design simple and intuitive.</li>
+          <li>Ensure the site is responsive and works well on all devices.</li>
+          <li>Minimize the number of clicks required to reach a goal.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">High usability leads to high satisfaction. When a site works exactly how a user expects it to, they feel competent and are more likely to return.</p>
+
+        <img src="images/screenshot-govuk.png" alt="Screenshot of Gov.uk" class="website-screenshot">
+        <p class="lect1-sub">Website: Gov.uk</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> This site is often cited as a pinnacle of usability. It is incredibly plain, but it is designed specifically to help citizens find information and complete tasks with zero distraction.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════ 10. CONSISTENCY ══════════════════════════ -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+        </div>
+        <span class="card-title">Consistency</span>
+      </div>
+      <div class="card-body">
+
+        <p class="lect1-sub">Significance</p>
+        <p class="note">Consistency means using the same design patterns, colors, and behaviors throughout the entire site. It creates a cohesive experience and builds trust.</p>
+
+        <p class="lect1-sub">Best Practices</p>
+        <ul class="lect1-list">
+          <li>Use a design system or style guide to ensure all components look and behave the same.</li>
+          <li>Keep navigation menus in the same place on every page.</li>
+          <li>Use consistent terminology for buttons and labels.</li>
+        </ul>
+
+        <p class="lect1-sub">Improving Visitor Experience</p>
+        <p class="note">Consistency reduces the learning curve. Once a user learns how to use one part of your site, they can apply that knowledge to the rest of the site, making them feel more comfortable.</p>
+
+        <img src="images/screenshot-stripe.png" alt="Screenshot of Stripe" class="website-screenshot">
+        <p class="lect1-sub">Website: Stripe</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Good:</strong> Stripe's website and documentation are perfectly consistent. Whether you are on their marketing homepage or deep in their technical API docs, the fonts, colors, and button styles remain the same.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ── Part 2: Bad Example ── -->
+    <div class="part-heading">
+      <span class="part-num">Prelim Lecture 1</span>
+      <h2>Anti-Design — A Case Study</h2>
+    </div>
+
+    <!-- ══════════════════════════ 11. BAD EXAMPLE ══════════════════════════ -->
+    <div class="card card-bad">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#b91c1c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+            <line x1="12" y1="9" x2="12" y2="13"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <span class="card-title">A "Bad" Example of Design Components</span>
+      </div>
+      <div class="card-body">
+
+        <img src="images/screenshot-lingscars.png" alt="Screenshot of LINGsCARS" class="website-screenshot">
+        <p class="lect1-sub">Website: LINGsCARS</p>
+        <ul class="lect1-list">
+          <li><strong>Why it is Bad:</strong> This website is a famous example of "anti-design." It breaks almost every rule mentioned above.</li>
+          <li><strong>Grids:</strong> There is no discernible grid. Content is scattered everywhere.</li>
+          <li><strong>Consistency:</strong> Every section uses different colors, fonts, and moving animations. There is no cohesion.</li>
+          <li><strong>Usability:</strong> It is extremely difficult to find specific information because the visual noise is overwhelming.</li>
+          <li><strong>Typography:</strong> It uses multiple clashing fonts and colors, making it very hard to read.</li>
+        </ul>
+
+        <p class="note">What makes it "good" in a very specific way is its branding: it is so intentionally chaotic that it has become a cult classic. However, for any standard business, this would be a textbook example of poor design.</p>
+
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

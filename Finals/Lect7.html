@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 7 — Bootstrap | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Finals</a>
+        <span>›</span>
+        <span class="current">Lecture 7</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M9 21V9"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Bootstrap</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Finals Lecture 7</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Responsive Design</span>
+        <span class="pill">CDN Setup</span>
+        <span class="pill">Containers</span>
+        <span class="pill">Grid System</span>
+        <span class="pill">Breakpoints</span>
+        <span class="pill">Color Utilities</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Divider ── -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <path d="M3 9h18M9 21V9"/>
+      </svg>
+      <span class="divider-text">Lecture Notes</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════
+         PART 1 — INTRODUCTION TO BOOTSTRAP
+    ══════════════════════════════════════════════════ -->
+    <div class="part-heading">
+      <span class="part-num">Part 1</span>
+      <h2>Introduction to Bootstrap</h2>
+    </div>
+
+    <!-- ── 1. What is Responsive Web Design & Bootstrap ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-title">What is Responsive Web Design?</span>
+      </div>
+      <div class="card-body">
+        <ul class="info-list">
+          <li>Responsive web design is about creating websites that <strong>automatically adjust themselves</strong> to look good on all devices — from small phones to large desktops.</li>
+          <li><strong>Bootstrap</strong> is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.</li>
+          <li>Bootstrap is completely <strong>free</strong> to download and use.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── 2. What is Bootstrap ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <span class="card-title">What is Bootstrap?</span>
+      </div>
+      <div class="card-body">
+        <p class="note">Bootstrap is a web design framework that makes it easy to build responsive websites quickly and effectively.</p>
+        <ul class="info-list">
+          <li>Created by web developers <strong>Mark Otto</strong> and <strong>Jacob Thornton</strong> at <strong>Twitter</strong> to help them build their website.</li>
+          <li>Released as an <strong>open source</strong> framework in <strong>August 2011</strong> on GitHub.</li>
+          <li>Has become one of the most popular front-end frameworks on the web.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── 3. Why Use Bootstrap ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <span class="card-title">Why Use Bootstrap?</span>
+      </div>
+      <div class="card-body">
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Advantage</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mobile First</strong></td>
+              <td>Bootstrap 3+ includes mobile-first styles throughout the entire library — not in separate files.</td>
+            </tr>
+            <tr>
+              <td><strong>Browser Support</strong></td>
+              <td>Supported by all major browsers (Chrome, Firefox, Safari, Edge).</td>
+            </tr>
+            <tr>
+              <td><strong>Easy to Start</strong></td>
+              <td>Only requires knowledge of HTML and CSS. The official Bootstrap site has comprehensive documentation.</td>
+            </tr>
+            <tr>
+              <td><strong>Responsive Design</strong></td>
+              <td>Bootstrap's responsive CSS automatically adjusts layouts for desktops, tablets, and mobiles.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sub-label">Other Advantages</p>
+        <ul class="info-list">
+          <li>Provides a clean and uniform solution for building interfaces.</li>
+          <li>Contains beautiful, functional built-in components that are easy to customize.</li>
+          <li>Supports web-based customization.</li>
+          <li>Completely open source — free forever.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ── 4. What Bootstrap Package Includes ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <span class="card-title">What Bootstrap Package Includes</span>
+      </div>
+      <div class="card-body">
+        <table class="data-table">
+          <thead>
+            <tr><th>Component</th><th>What It Provides</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Scaffolding</strong></td>
+              <td>Basic structure with a Grid System, link styles, and background. Covered in Bootstrap Basic Structure.</td>
+            </tr>
+            <tr>
+              <td><strong>CSS</strong></td>
+              <td>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</td>
+            </tr>
+            <tr>
+              <td><strong>Components</strong></td>
+              <td>Over a dozen reusable components — iconography, dropdowns, navigation, alerts, popovers, and more.</td>
+            </tr>
+            <tr>
+              <td><strong>JavaScript Plugins</strong></td>
+              <td>Over a dozen custom jQuery plugins. Include them all or one by one.</td>
+            </tr>
+            <tr>
+              <td><strong>Customize</strong></td>
+              <td>Customize Bootstrap's components and jQuery plugins to produce your own version.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ── 5. Bootstrap or My Own CSS ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span class="card-title">Should I Use Bootstrap or My Own CSS?</span>
+      </div>
+      <div class="card-body">
+
+        <div class="compare">
+          <div class="compare-cell">
+            <div class="compare-cell-label new">&#10003; Use Bootstrap When…</div>
+            <div style="padding:0.75rem;">
+              <ul class="info-list">
+                <li>Time is of the essence</li>
+                <li>The design easily fits Bootstrap's patterns</li>
+                <li>You will have control over the final HTML</li>
+                <li>You need many of the design patterns Bootstrap offers</li>
+                <li>You lack experience writing cross-browser compliant CSS/HTML</li>
+              </ul>
+            </div>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-cell-label old">&#10007; Roll Your Own CSS When…</div>
+            <div style="padding:0.75rem;">
+              <ul class="info-list">
+                <li>You have a reasonable deadline for the front end</li>
+                <li>The design does <em>not</em> fit Bootstrap's patterns</li>
+                <li>You are working with a CMS that requires modifying HTML</li>
+                <li>You only need one or two things Bootstrap offers</li>
+                <li>You have solid experience writing CSS and HTML</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART 2 — SETUP & FIRST PAGE
+    ══════════════════════════════════════════════════ -->
+    <div class="part-heading">
+      <span class="part-num">Part 2</span>
+      <h2>Setup &amp; First Bootstrap Page</h2>
+    </div>
+
+    <!-- ── 6. Environment Setup ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+        </div>
+        <span class="card-title">Bootstrap — Environment Setup</span>
+      </div>
+      <div class="card-body">
+
+        <p class="sub-label">Option 1 — Download Bootstrap</p>
+        <p class="note">Download the latest version directly from <strong>getbootstrap.com</strong> and host the files yourself alongside your project.</p>
+
+        <p class="sub-label">Option 2 — Include via CDN (Recommended)</p>
+        <p class="note">A <strong>CDN (Content Delivery Network)</strong> is a system of distributed servers that deliver web content to a user based on their geographic location. Using a CDN means you don't need to download or host Bootstrap — just link to it.</p>
+
+        <div class="code-label">Bootstrap 5 CDN Links — paste inside &lt;head&gt;</div>
+        <pre><span class="token-cmt">&lt;!-- Bootstrap CSS --&gt;</span>
+<span class="token-tag">&lt;link</span> <span class="token-attr">href</span>=<span class="token-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"</span>
+      <span class="token-attr">rel</span>=<span class="token-val">"stylesheet"</span><span class="token-tag">&gt;</span>
+
+<span class="token-cmt">&lt;!-- Bootstrap JS Bundle (includes Popper) --&gt;</span>
+<span class="token-tag">&lt;script</span> <span class="token-attr">src</span>=<span class="token-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"</span><span class="token-tag">&gt;&lt;/script&gt;</span></pre>
+
+        <p class="sub-label">Bootstrap 5 Release Timeline</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Release</th><th>Date</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Bootstrap 5 First Alpha</td><td>June 16, 2020</td></tr>
+            <tr><td>Bootstrap 5 Alpha 2</td><td>September 29, 2020</td></tr>
+            <tr><td>Bootstrap 5 Alpha 3</td><td>November 11, 2020</td></tr>
+            <tr><td>Bootstrap 5 Beta 1</td><td>December 7, 2020</td></tr>
+            <tr><td>Bootstrap 5 Beta 2</td><td>February 10, 2021</td></tr>
+            <tr><td>Bootstrap 5 Beta 3</td><td>March 22, 2021</td></tr>
+            <tr><td><strong>Bootstrap 5 Stable Release</strong></td><td><strong>May 5, 2021</strong></td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 7. First Bootstrap Page ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+          </svg>
+        </div>
+        <span class="card-title">Create Your First Bootstrap Page</span>
+      </div>
+      <div class="card-body">
+
+        <p class="sub-label">Step 1 — Add the HTML5 Doctype</p>
+        <p class="note">Bootstrap uses HTML elements and CSS properties that require the HTML5 doctype. Always include it at the very start of your page, along with the <code>lang</code> attribute and correct character set.</p>
+        <div class="code-label">Required Boilerplate</div>
+        <pre><span class="token-tag">&lt;!doctype html&gt;</span>
+<span class="token-tag">&lt;html</span> <span class="token-attr">lang</span>=<span class="token-val">"en"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;head&gt;</span>
+    <span class="token-tag">&lt;meta</span> <span class="token-attr">charset</span>=<span class="token-val">"utf-8"</span><span class="token-tag">&gt;</span>
+    ...
+  <span class="token-tag">&lt;/head&gt;</span>
+<span class="token-tag">&lt;/html&gt;</span></pre>
+
+        <p class="sub-label">Step 2 — Bootstrap is Mobile-First</p>
+        <p class="note">To ensure proper rendering and touch zooming on mobile devices, add the viewport <code>&lt;meta&gt;</code> tag inside <code>&lt;head&gt;</code>:</p>
+        <div class="code-label">Viewport Meta Tag</div>
+        <pre><span class="token-tag">&lt;meta</span> <span class="token-attr">name</span>=<span class="token-val">"viewport"</span>
+      <span class="token-attr">content</span>=<span class="token-val">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="token-tag">&gt;</span></pre>
+
+        <p class="sub-label">Full Source Code — 3-Column Page</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;!DOCTYPE html&gt;</span>
+<span class="token-tag">&lt;html</span> <span class="token-attr">lang</span>=<span class="token-val">"en"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;head&gt;</span>
+  <span class="token-tag">&lt;title&gt;</span>Bootstrap 5 Example<span class="token-tag">&lt;/title&gt;</span>
+  <span class="token-tag">&lt;meta</span> <span class="token-attr">charset</span>=<span class="token-val">"utf-8"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;meta</span> <span class="token-attr">name</span>=<span class="token-val">"viewport"</span> <span class="token-attr">content</span>=<span class="token-val">"width=device-width, initial-scale=1"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;link</span> <span class="token-attr">href</span>=<span class="token-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"</span> <span class="token-attr">rel</span>=<span class="token-val">"stylesheet"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;script</span> <span class="token-attr">src</span>=<span class="token-val">"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"</span><span class="token-tag">&gt;&lt;/script&gt;</span>
+<span class="token-tag">&lt;/head&gt;</span>
+<span class="token-tag">&lt;body&gt;</span>
+
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container-fluid p-5 bg-primary text-white text-center"</span><span class="token-tag">&gt;</span>
+    <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+    <span class="token-tag">&lt;p&gt;</span>Resize this responsive page to see the effect!<span class="token-tag">&lt;/p&gt;</span>
+  <span class="token-tag">&lt;/div&gt;</span>
+
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container mt-5"</span><span class="token-tag">&gt;</span>
+    <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+      <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-4"</span><span class="token-tag">&gt;</span>
+        <span class="token-tag">&lt;h3&gt;</span>Column 1<span class="token-tag">&lt;/h3&gt;</span>
+        <span class="token-tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet...<span class="token-tag">&lt;/p&gt;</span>
+      <span class="token-tag">&lt;/div&gt;</span>
+      <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-4"</span><span class="token-tag">&gt;</span>
+        <span class="token-tag">&lt;h3&gt;</span>Column 2<span class="token-tag">&lt;/h3&gt;</span>
+        <span class="token-tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet...<span class="token-tag">&lt;/p&gt;</span>
+      <span class="token-tag">&lt;/div&gt;</span>
+      <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-4"</span><span class="token-tag">&gt;</span>
+        <span class="token-tag">&lt;h3&gt;</span>Column 3<span class="token-tag">&lt;/h3&gt;</span>
+        <span class="token-tag">&lt;p&gt;</span>Lorem ipsum dolor sit amet...<span class="token-tag">&lt;/p&gt;</span>
+      <span class="token-tag">&lt;/div&gt;</span>
+    <span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;/div&gt;</span>
+
+<span class="token-tag">&lt;/body&gt;</span>
+<span class="token-tag">&lt;/html&gt;</span></pre>
+
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="p-box bs-primary" style="text-align:center;border-radius:4px;margin-bottom:0.75rem;">
+              <h4 style="font-size:1.1rem;margin-bottom:0.2rem;">My First Bootstrap Page</h4>
+              <p>Resize this responsive page to see the effect!</p>
+            </div>
+            <div class="bs-row">
+              <div class="bs-col-4">
+                <div class="col-box" style="text-align:left;padding:0.75rem;">
+                  <strong style="font-size:0.85rem;">Column 1</strong>
+                  <p style="font-size:0.72rem;color:#6c757d;margin-top:0.25rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                </div>
+              </div>
+              <div class="bs-col-4">
+                <div class="col-box" style="text-align:left;padding:0.75rem;">
+                  <strong style="font-size:0.85rem;">Column 2</strong>
+                  <p style="font-size:0.72rem;color:#6c757d;margin-top:0.25rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                </div>
+              </div>
+              <div class="bs-col-4">
+                <div class="col-box" style="text-align:left;padding:0.75rem;">
+                  <strong style="font-size:0.85rem;">Column 3</strong>
+                  <p style="font-size:0.72rem;color:#6c757d;margin-top:0.25rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART 3 — BOOTSTRAP LAYOUT
+    ══════════════════════════════════════════════════ -->
+    <div class="part-heading">
+      <span class="part-num">Part 3</span>
+      <h2>Bootstrap Layout — Containers</h2>
+    </div>
+
+    <!-- ── 8. Containers ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <span class="card-title">Bootstrap Containers</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Containers are used to pad the content inside them. There are two main container classes:</p>
+
+        <p class="sub-label">.container — Fixed Width</p>
+        <p class="note">Creates a responsive, <strong>fixed-width</strong> container. Its <code>max-width</code> changes at each breakpoint. Best for standard page layouts.</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span>This part is inside a .container class.<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-container"><code>.container</code> — fixed width, centred</div>
+          </div>
+        </div>
+
+        <p class="sub-label">.container-fluid — Full Width</p>
+        <p class="note">Creates a <strong>full-width</strong> container that always spans the entire width of the screen (width is always 100%). Best for full-bleed sections like heroes and navbars.</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container-fluid"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span>This part is inside a .container-fluid class.<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-container-fluid"><code>.container-fluid</code> — full 100% width</div>
+          </div>
+        </div>
+
+        <p class="sub-label">Container Breakpoints</p>
+        <p class="note">The <code>.container</code> class has a fixed <code>max-width</code> that changes at each responsive breakpoint:</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Extra Small &lt;576px</th>
+              <th>Small ≥576px</th>
+              <th>Medium ≥768px</th>
+              <th>Large ≥992px</th>
+              <th>X-Large ≥1200px</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.container</code></td>
+              <td>100%</td><td>540px</td><td>720px</td><td>960px</td><td>1140px</td>
+            </tr>
+            <tr>
+              <td><code>.container-sm</code></td>
+              <td>100%</td><td>540px</td><td>720px</td><td>960px</td><td>1140px</td>
+            </tr>
+            <tr>
+              <td><code>.container-md</code></td>
+              <td>100%</td><td>100%</td><td>720px</td><td>960px</td><td>1140px</td>
+            </tr>
+            <tr>
+              <td><code>.container-lg</code></td>
+              <td>100%</td><td>100%</td><td>100%</td><td>960px</td><td>1140px</td>
+            </tr>
+            <tr>
+              <td><code>.container-xl</code></td>
+              <td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>1140px</td>
+            </tr>
+            <tr>
+              <td><code>.container-fluid</code></td>
+              <td>100%</td><td>100%</td><td>100%</td><td>100%</td><td>100%</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 9. Container Padding, Border & Color ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+        </div>
+        <span class="card-title">Container Padding, Border &amp; Color</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">By default, containers have <strong>15px left and right padding</strong> with no top or bottom padding. Use Bootstrap's spacing utilities to add extra padding and margins.</p>
+
+        <p class="sub-label">Spacing Utilities</p>
+        <ul class="info-list">
+          <li><code>.p-3</code> — padding on all sides (16px / 1rem)</li>
+          <li><code>.pt-3</code> — top padding only</li>
+          <li><code>.my-3</code> — vertical margin (top &amp; bottom)</li>
+          <li><code>.mt-5</code> — top margin (48px / 3rem)</li>
+        </ul>
+
+        <p class="sub-label">Border &amp; Color Variants</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-cmt">&lt;!-- Border container --&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container p-3 my-3 border"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span>This container has a border and extra padding.<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span>
+
+<span class="token-cmt">&lt;!-- Dark background --&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container p-3 my-3 bg-dark text-white"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span>Dark background, white text.<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span>
+
+<span class="token-cmt">&lt;!-- Primary (blue) background --&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"container p-3 my-3 bg-primary text-white"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;h1&gt;</span>My First Bootstrap Page<span class="token-tag">&lt;/h1&gt;</span>
+  <span class="token-tag">&lt;p&gt;</span>Blue background, white text.<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="p-box bs-border" style="margin-bottom:0.5rem;">
+              <h4>My First Bootstrap Page</h4>
+              <p>This container has a border and some extra padding and margins.</p>
+            </div>
+            <div class="p-box bs-dark" style="margin-bottom:0.5rem;">
+              <h4>My First Bootstrap Page</h4>
+              <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+            </div>
+            <div class="p-box bs-primary">
+              <h4>My First Bootstrap Page</h4>
+              <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART 4 — GRID SYSTEM
+    ══════════════════════════════════════════════════ -->
+    <div class="part-heading">
+      <span class="part-num">Part 4</span>
+      <h2>Bootstrap Grid System</h2>
+    </div>
+
+    <!-- ── 10. Grid System ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <span class="card-title">Grid System — Concept &amp; Classes</span>
+      </div>
+      <div class="card-body">
+
+        <ul class="info-list">
+          <li>Bootstrap's grid system is built with <strong>flexbox</strong> and allows up to <strong>12 columns</strong> across the page.</li>
+          <li>If you don't need all 12 individual columns, you can group them together to create wider columns.</li>
+          <li>Always wrap columns inside a <code>.row</code> div, and wrap that inside a <code>.container</code>.</li>
+        </ul>
+
+        <div class="output-label">12-Column Grid Visualised</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-row" style="margin-bottom:4px;">
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+              <div class="bs-col"><div class="col-box">1</div></div>
+            </div>
+            <div class="bs-row" style="margin-bottom:4px;">
+              <div class="bs-col-4"><div class="col-box">span 4</div></div>
+              <div class="bs-col-4"><div class="col-box">span 4</div></div>
+              <div class="bs-col-4"><div class="col-box">span 4</div></div>
+            </div>
+            <div class="bs-row" style="margin-bottom:4px;">
+              <div class="bs-col-4"><div class="col-box">span 4</div></div>
+              <div class="bs-col-8"><div class="col-box">span 8</div></div>
+            </div>
+            <div class="bs-row" style="margin-bottom:4px;">
+              <div class="bs-col"><div class="col-box">span 6</div></div>
+              <div class="bs-col"><div class="col-box">span 6</div></div>
+            </div>
+            <div class="bs-row">
+              <div class="bs-col-12"><div class="col-box">span 12</div></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="sub-label">Grid Classes</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Class</th><th>Breakpoint</th><th>Screen Width</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>.col-</code></td><td>Extra small</td><td>&lt; 576px</td></tr>
+            <tr><td><code>.col-sm-</code></td><td>Small</td><td>≥ 576px</td></tr>
+            <tr><td><code>.col-md-</code></td><td>Medium</td><td>≥ 768px</td></tr>
+            <tr><td><code>.col-lg-</code></td><td>Large</td><td>≥ 992px</td></tr>
+            <tr><td><code>.col-xl-</code></td><td>Extra large</td><td>≥ 1200px</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 11. Grid Structure & Examples ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/>
+            <line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/>
+            <line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+        </div>
+        <span class="card-title">Grid Structure &amp; Examples</span>
+      </div>
+      <div class="card-body">
+
+        <p class="sub-label">Basic Grid Structure</p>
+        <div class="code-label">Template</div>
+        <pre><span class="token-cmt">&lt;!-- Control column widths manually --&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-*-*"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-*-*"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span>
+
+<span class="token-cmt">&lt;!-- Let Bootstrap handle the layout automatically --&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;&lt;/div&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+
+        <p class="sub-label">Three Equal Columns — .col</p>
+        <p class="note">Using <code>.col</code> (with no number) lets Bootstrap automatically distribute columns equally across all screen sizes.</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;</span>.col<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;</span>.col<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col"</span><span class="token-tag">&gt;</span>.col<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-row">
+              <div class="bs-col"><div class="col-box">.col</div></div>
+              <div class="bs-col"><div class="col-box">.col</div></div>
+              <div class="bs-col"><div class="col-box">.col</div></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="sub-label">Responsive Columns — .col-sm-3</p>
+        <p class="note">Four equal columns starting at tablets (≥576px). On screens smaller than 576px, the columns <strong>automatically stack vertically</strong>.</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-3"</span><span class="token-tag">&gt;</span>.col-sm-3<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-3"</span><span class="token-tag">&gt;</span>.col-sm-3<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-3"</span><span class="token-tag">&gt;</span>.col-sm-3<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-3"</span><span class="token-tag">&gt;</span>.col-sm-3<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-row">
+              <div class="bs-col-3"><div class="col-box">.col-sm-3</div></div>
+              <div class="bs-col-3"><div class="col-box">.col-sm-3</div></div>
+              <div class="bs-col-3"><div class="col-box">.col-sm-3</div></div>
+              <div class="bs-col-3"><div class="col-box">.col-sm-3</div></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="sub-label">Two Unequal Responsive Columns — .col-sm-4 + .col-sm-8</p>
+        <p class="note">A sidebar (1/3 width) and main content area (2/3 width) — a very common layout pattern. The two column numbers must always add up to 12.</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"row"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-4"</span><span class="token-tag">&gt;</span>.col-sm-4<span class="token-tag">&lt;/div&gt;</span>
+  <span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"col-sm-8"</span><span class="token-tag">&gt;</span>.col-sm-8<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;/div&gt;</span></pre>
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="bs-row">
+              <div class="bs-col-4"><div class="col-box">.col-sm-4</div></div>
+              <div class="bs-col-8"><div class="col-box">.col-sm-8</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>Column numbers in a row must <strong>always add up to 12</strong>. For example: <code>col-sm-4</code> + <code>col-sm-8</code> = 12. <code>col-sm-6</code> + <code>col-sm-6</code> = 12. You can also mix breakpoints: <code>col-sm-6 col-md-4</code> = different layout at different screen sizes.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PART 5 — BOOTSTRAP COLORS
+    ══════════════════════════════════════════════════ -->
+    <div class="part-heading">
+      <span class="part-num">Part 5</span>
+      <h2>Bootstrap Colors</h2>
+    </div>
+
+    <!-- ── 12. Text Colors ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 20h16M9 4h6l3 8H6L9 4z"/>
+            <path d="M6 12l-2 8M18 12l2 8"/>
+          </svg>
+        </div>
+        <span class="card-title">Bootstrap Text Colors</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Bootstrap provides <strong>contextual text color classes</strong> that carry semantic meaning through color. They can be applied to any element and also work on links — links will show a darker hover state.</p>
+
+        <div class="code-label">Available Text Color Classes</div>
+        <pre><span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-muted"</span><span class="token-tag">&gt;</span>Muted text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-primary"</span><span class="token-tag">&gt;</span>Primary text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-success"</span><span class="token-tag">&gt;</span>Success text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-info"</span><span class="token-tag">&gt;</span>Info text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-warning"</span><span class="token-tag">&gt;</span>Warning text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-danger"</span><span class="token-tag">&gt;</span>Danger text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-secondary"</span><span class="token-tag">&gt;</span>Secondary text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-dark"</span><span class="token-tag">&gt;</span>Dark text<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-body"</span><span class="token-tag">&gt;</span>Body / default text<span class="token-tag">&lt;/p&gt;</span>
+
+<span class="token-cmt">&lt;!-- 50% opacity variants --&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-black-50"</span><span class="token-tag">&gt;</span>Black text at 50% opacity<span class="token-tag">&lt;/p&gt;</span>
+<span class="token-tag">&lt;p</span> <span class="token-attr">class</span>=<span class="token-val">"text-white-50 bg-dark"</span><span class="token-tag">&gt;</span>White text at 50% opacity<span class="token-tag">&lt;/p&gt;</span></pre>
+
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div class="txt-row">
+              <span class="txt-swatch c-muted">Muted</span>
+              <span class="txt-swatch c-primary">Primary</span>
+              <span class="txt-swatch c-success">Success</span>
+              <span class="txt-swatch c-info">Info</span>
+              <span class="txt-swatch c-warning">Warning</span>
+              <span class="txt-swatch c-danger">Danger</span>
+              <span class="txt-swatch c-secondary">Secondary</span>
+              <span class="txt-swatch c-dark">Dark</span>
+              <span class="txt-swatch c-body">Body/black</span>
+            </div>
+            <div style="font-size:0.78rem;color:rgba(0,0,0,0.5);margin-top:0.4rem;">Black text with 50% opacity on white background</div>
+            <div style="background:#212529;padding:0.35rem 0.6rem;border-radius:4px;margin-top:0.4rem;">
+              <span style="font-size:0.78rem;color:rgba(255,255,255,0.5);">White text with 50% opacity on black background</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 13. Background Colors ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12C2 6.5 6.5 2 12 2a10 10 0 0 1 8 4"/>
+            <path d="M5 19.5C5.5 18 6 15 6 12c0-3 1-5.5 3-7"/>
+            <path d="M17.8 4.8C20 7.1 21 9.9 21 12c0 5.5-4.5 10-10 10-1.5 0-3-.5-4.2-1.2"/>
+          </svg>
+        </div>
+        <span class="card-title">Bootstrap Background Colors</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Background color classes style an element's background. Note: they do <strong>not</strong> change the text color automatically, so pair them with a <code>.text-*</code> class when needed.</p>
+
+        <div class="code-label">Available Background Color Classes</div>
+        <pre><span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-primary text-white"</span><span class="token-tag">&gt;</span>Primary<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-success text-white"</span><span class="token-tag">&gt;</span>Success<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-info text-dark"</span><span class="token-tag">&gt;</span>Info<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-warning text-dark"</span><span class="token-tag">&gt;</span>Warning<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-danger text-white"</span><span class="token-tag">&gt;</span>Danger<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-secondary text-white"</span><span class="token-tag">&gt;</span>Secondary<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-dark text-white"</span><span class="token-tag">&gt;</span>Dark<span class="token-tag">&lt;/div&gt;</span>
+<span class="token-tag">&lt;div</span> <span class="token-attr">class</span>=<span class="token-val">"bg-light text-dark"</span><span class="token-tag">&gt;</span>Light<span class="token-tag">&lt;/div&gt;</span></pre>
+
+        <div class="output-label">Simulated Output</div>
+        <div class="output-box">
+          <div class="bs-demo">
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <div class="p-box bs-primary" style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Primary</div>
+              <div class="p-box bs-success" style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Success</div>
+              <div class="p-box bs-info"    style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Info</div>
+              <div class="p-box bs-warning" style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Warning</div>
+              <div class="p-box bs-danger"  style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Danger</div>
+              <div class="p-box bs-secondary" style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Secondary</div>
+              <div class="p-box bs-dark"   style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Dark</div>
+              <div class="p-box bs-light"  style="flex:1;min-width:120px;text-align:center;margin:0;padding:0.5rem;">Light</div>
+            </div>
+            <p style="font-size:0.72rem;color:#888;margin-top:0.6rem;">Note: background color classes do not set text color — always pair with a <code style="font-family:monospace;font-size:0.7rem;">.text-*</code> class.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

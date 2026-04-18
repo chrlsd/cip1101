@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 4 — Lists, Links &amp; Images | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Midterms</a>
+        <span>›</span>
+        <span class="current">Lecture 4</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Lists, Links &amp; Images</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Lecture 4</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Ordered Lists</span>
+        <span class="pill">list-style-type</span>
+        <span class="pill">start &amp; value</span>
+        <span class="pill">Unordered Lists</span>
+        <span class="pill">Nested Lists</span>
+        <span class="pill">Anchor Tags</span>
+        <span class="pill">Images</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+      <span class="divider-text">Lecture Notes &amp; Examples</span>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <!-- ════ PART 1: LISTS ════ -->
+    <div class="part-heading">
+      <span class="part-num">Lect 3 PDF</span>
+      <h2>HTML Lists</h2>
+    </div>
+
+    <!-- 1. Ordered List — CSS list-style-type -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="10" y1="6" x2="21" y2="6"/><line x1="10" y1="12" x2="21" y2="12"/>
+            <line x1="10" y1="18" x2="21" y2="18"/>
+            <path d="M4 6h1v4"/><path d="M4 10H6"/><path d="M6 18H4l2-2a1.5 1.5 0 1 0-2-2"/>
+          </svg>
+        </div>
+        <span class="card-title">Ordered List — <code style="font-size:0.78rem;">&lt;ol&gt;</code> &amp; CSS <code style="font-size:0.78rem;">list-style-type: upper-roman</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          An ordered list uses <code>&lt;ol&gt;</code> with <code>&lt;li&gt;</code> items. The default marker is decimal (1, 2, 3…). The CSS property <code>list-style-type</code> changes the marker style. When applied to the <code>li</code> selector in a linked stylesheet, it affects all list items on the page.
+        </p>
+        <div class="compare">
+          <div class="compare-cell">
+            <div class="compare-cell-label" style="color:#7e22ce;">CSS (Lect4.css)</div>
+            <pre><span class="token-sel">li</span> {
+  <span class="token-prop">list-style-type</span>: <span class="token-str">upper-roman</span>;
+}</pre>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-cell-label" style="color:#1d4ed8;">HTML</div>
+            <pre><span class="token-tag">&lt;ol&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Yellow Paper</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+          </div>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box lect4-demo">
+            <ol>
+              <li>Notebook</li>
+              <li>Ballpen</li>
+              <li>Yellow Paper</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Ordered List — inline list-style-type -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="10" y1="6" x2="21" y2="6"/><line x1="10" y1="12" x2="21" y2="12"/>
+            <line x1="10" y1="18" x2="21" y2="18"/>
+            <path d="M4 6h1v4"/><path d="M4 10H6"/><path d="M6 18H4l2-2a1.5 1.5 0 1 0-2-2"/>
+          </svg>
+        </div>
+        <span class="card-title">Ordered List — Inline <code style="font-size:0.78rem;">list-style-type</code> Values</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>list-style-type</code> property can also be set as an inline <code>style</code> attribute on individual <code>&lt;li&gt;</code> elements. Common values include <code>lower-roman</code> (i, ii, iii…) and <code>decimal</code> (1, 2, 3…).
+        </p>
+        <div>
+          <p class="code-label">lower-roman</p>
+          <pre><span class="token-tag">&lt;ol&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: lower-roman;"</span><span class="token-tag">&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: lower-roman;"</span><span class="token-tag">&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: lower-roman;"</span><span class="token-tag">&gt;</span><span class="token-txt">Yellow Paper</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output — lower-roman</p>
+          <div class="output-box">
+            <ol>
+              <li style="list-style-type: lower-roman;">Notebook</li>
+              <li style="list-style-type: lower-roman;">Ballpen</li>
+              <li style="list-style-type: lower-roman;">Yellow Paper</li>
+            </ol>
+          </div>
+        </div>
+        <div>
+          <p class="code-label">decimal</p>
+          <pre><span class="token-tag">&lt;ol&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: decimal;"</span><span class="token-tag">&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: decimal;"</span><span class="token-tag">&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: decimal;"</span><span class="token-tag">&gt;</span><span class="token-txt">Yellow Paper</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output — decimal</p>
+          <div class="output-box">
+            <ol>
+              <li style="list-style-type: decimal;">Notebook</li>
+              <li style="list-style-type: decimal;">Ballpen</li>
+              <li style="list-style-type: decimal;">Yellow Paper</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Ordered List — start & type attributes -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <span class="card-title">Ordered List — <code style="font-size:0.78rem;">type</code> &amp; <code style="font-size:0.78rem;">start</code> Attributes</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>type</code> attribute sets the marker kind: <code>A</code> (uppercase letters), <code>a</code> (lowercase), <code>I</code> (uppercase Roman), <code>i</code> (lowercase Roman), or <code>1</code> (decimal). The <code>start</code> attribute sets the counter's starting value regardless of type.
+        </p>
+        <div>
+          <p class="code-label">Code — type="A" start="10"</p>
+          <pre><span class="token-tag">&lt;ol</span> <span class="token-attr">type</span>=<span class="token-val">"A"</span> <span class="token-attr">start</span>=<span class="token-val">"10"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Yellow Paper</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <ol type="A" start="10">
+              <li>Notebook</li>
+              <li>Ballpen</li>
+              <li>Yellow Paper</li>
+            </ol>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>With <code>type="A"</code> and <code>start="10"</code>, the list begins at the 10th letter of the alphabet — <strong>J</strong>. The <code>start</code> value is always an integer, even when using letter or Roman numeral types.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Ordered List — class + value attribute -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <span class="card-title">Ordered List — CSS Class &amp; <code style="font-size:0.78rem;">value</code> Attribute</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          A CSS class can set <code>list-style-type</code> for a specific list only. The <code>value</code> attribute on an individual <code>&lt;li&gt;</code> overrides the counter for that item and all subsequent items, letting you create non-sequential numbering.
+        </p>
+        <div class="compare">
+          <div class="compare-cell">
+            <div class="compare-cell-label" style="color:#7e22ce;">CSS (Lect4.css)</div>
+            <pre><span class="token-sel">.loweralpha-list</span> {
+  <span class="token-prop">list-style-type</span>: <span class="token-str">lower-alpha</span>;
+}</pre>
+          </div>
+          <div class="compare-cell">
+            <div class="compare-cell-label" style="color:#1d4ed8;">HTML</div>
+            <pre><span class="token-tag">&lt;ol</span> <span class="token-attr">class</span>=<span class="token-val">"loweralpha-list"</span>
+    <span class="token-attr">start</span>=<span class="token-val">"2"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li</span> <span class="token-attr">value</span>=<span class="token-val">"5"</span><span class="token-tag">&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Yellow Paper</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+          </div>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box lect4-demo">
+            <ol class="loweralpha-list" start="2">
+              <li>Notebook</li>
+              <li value="5">Ballpen</li>
+              <li>Yellow Paper</li>
+            </ol>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>Starting at <code>start="2"</code> → b. The <code>value="5"</code> jumps the counter to e, so the third item renders as f. This shows how <code>start</code> and <code>value</code> work together.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Unordered Lists -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="9" y1="6" x2="20" y2="6"/><line x1="9" y1="12" x2="20" y2="12"/>
+            <line x1="9" y1="18" x2="20" y2="18"/>
+            <circle cx="4" cy="6" r="1" fill="#991b1b"/>
+            <circle cx="4" cy="12" r="1" fill="#991b1b"/>
+            <circle cx="4" cy="18" r="1" fill="#991b1b"/>
+          </svg>
+        </div>
+        <span class="card-title">Unordered List — <code style="font-size:0.78rem;">&lt;ul&gt;</code> &amp; <code style="font-size:0.78rem;">list-style-type</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          An unordered list uses <code>&lt;ul&gt;</code> and renders bullet markers by default. Three common <code>list-style-type</code> values are <code>disc</code> (●, default), <code>circle</code> (○), and <code>square</code> (■).
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-cmt">&lt;!-- disc (default) --&gt;</span>
+<span class="token-tag">&lt;ul</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: disc;"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Coffee</span><span class="token-tag">&lt;/li&gt;</span>  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Tea</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ul&gt;</span>
+
+<span class="token-cmt">&lt;!-- circle --&gt;</span>
+<span class="token-tag">&lt;ul</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: circle;"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Coffee</span><span class="token-tag">&lt;/li&gt;</span>  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Tea</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ul&gt;</span>
+
+<span class="token-cmt">&lt;!-- square --&gt;</span>
+<span class="token-tag">&lt;ul</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: square;"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Coffee</span><span class="token-tag">&lt;/li&gt;</span>  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Tea</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ul&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <p style="font-size:0.78rem;color:#888;margin-bottom:0.2rem;">disc</p>
+            <ul style="list-style-type: disc;">
+              <li>Coffee</li><li>Tea</li>
+            </ul>
+            <p style="font-size:0.78rem;color:#888;margin:0.6rem 0 0.2rem;">circle</p>
+            <ul style="list-style-type: circle;">
+              <li>Coffee</li><li>Tea</li>
+            </ul>
+            <p style="font-size:0.78rem;color:#888;margin:0.6rem 0 0.2rem;">square</p>
+            <ul style="list-style-type: square;">
+              <li>Coffee</li><li>Tea</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Nested Lists -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <span class="card-title">Nested Lists</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          Lists can be nested inside one another by placing a new <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> inside an <code>&lt;li&gt;</code> element. This creates hierarchical structures like outlines or multi-level menus.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;ul&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">School Supplies</span>
+    <span class="token-tag">&lt;ul&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Notebook</span><span class="token-tag">&lt;/li&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Ballpen</span><span class="token-tag">&lt;/li&gt;</span>
+    <span class="token-tag">&lt;/ul&gt;</span>
+  <span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Electronics</span>
+    <span class="token-tag">&lt;ol&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Laptop</span><span class="token-tag">&lt;/li&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Phone</span><span class="token-tag">&lt;/li&gt;</span>
+    <span class="token-tag">&lt;/ol&gt;</span>
+  <span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ul&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <ul>
+              <li>School Supplies
+                <ul>
+                  <li>Notebook</li>
+                  <li>Ballpen</li>
+                </ul>
+              </li>
+              <li>Electronics
+                <ol>
+                  <li>Laptop</li>
+                  <li>Phone</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════ PART 2: LINKS & IMAGES ════ -->
+    <div class="part-heading" style="margin-top:0.5rem;">
+      <span class="part-num">Lect 4 PDF</span>
+      <h2>Links &amp; Images</h2>
+    </div>
+
+    <!-- 7. Anchor tag — basic href -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <span class="card-title">Anchor Tag — <code style="font-size:0.78rem;">&lt;a href&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;a&gt;</code> (anchor) element creates a hyperlink. The <code>href</code> attribute specifies the URL destination. The link text placed between the opening and closing tags is what the user clicks. URLs can be absolute (full URL) or relative (path within the same site).
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-cmt">&lt;!-- Absolute URL --&gt;</span>
+<span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"https://www.w3schools.com"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Visit W3Schools</span>
+<span class="token-tag">&lt;/a&gt;</span>
+
+<span class="token-cmt">&lt;!-- Relative URL --&gt;</span>
+<span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"gallery.html"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Go to Gallery</span>
+<span class="token-tag">&lt;/a&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <a href="https://www.w3schools.com">Visit W3Schools</a>
+            &nbsp;&nbsp;
+            <a href="gallery.html">Go to Gallery</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. target attribute -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </div>
+        <span class="card-title">Anchor Tag — <code style="font-size:0.78rem;">target</code> Attribute</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>target</code> attribute controls where the linked document opens. <code>_blank</code> opens in a new tab or window, while <code>_self</code> (the default) opens in the same frame. Other values include <code>_parent</code> and <code>_top</code> for frameset navigation.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-cmt">&lt;!-- Opens in a new tab --&gt;</span>
+<span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"https://www.w3schools.com"</span>
+   <span class="token-attr">target</span>=<span class="token-val">"_blank"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Open in New Tab</span>
+<span class="token-tag">&lt;/a&gt;</span>
+
+<span class="token-cmt">&lt;!-- Opens in same tab (default) --&gt;</span>
+<span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"https://www.w3schools.com"</span>
+   <span class="token-attr">target</span>=<span class="token-val">"_self"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Open in Same Tab</span>
+<span class="token-tag">&lt;/a&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <a href="https://www.w3schools.com" target="_blank">Open in New Tab</a>
+            &nbsp;&nbsp;
+            <a href="https://www.w3schools.com" target="_self">Open in Same Tab</a>
+          </div>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>When using <code>target="_blank"</code>, it is good practice to also add <code>rel="noopener noreferrer"</code> for security, preventing the new page from accessing the original window via <code>window.opener</code>.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. mailto: link -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <span class="card-title">Email Link — <code style="font-size:0.78rem;">href="mailto:"</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          Setting <code>href</code> to a <code>mailto:</code> URL creates a link that opens the user's default email application with the To field pre-filled. You can also pre-fill the subject using <code>?subject=</code>.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"mailto:someone@example.com"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Send Email</span>
+<span class="token-tag">&lt;/a&gt;</span>
+
+<span class="token-cmt">&lt;!-- With a subject line --&gt;</span>
+<span class="token-tag">&lt;a</span> <span class="token-attr">href</span>=<span class="token-val">"mailto:someone@example.com?subject=Hello"</span><span class="token-tag">&gt;</span>
+  <span class="token-txt">Email with Subject</span>
+<span class="token-tag">&lt;/a&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <a href="mailto:someone@example.com">Send Email</a>
+            &nbsp;&nbsp;
+            <a href="mailto:someone@example.com?subject=Hello">Email with Subject</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. img tag -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <span class="card-title">Image — <code style="font-size:0.78rem;">&lt;img&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;img&gt;</code> tag is a void (self-closing) element that embeds an image. The <code>src</code> attribute holds the image URL or path. The <code>alt</code> attribute provides alternative text for accessibility and displays when the image cannot load. <code>width</code> and <code>height</code> control its dimensions.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;img</span>
+  <span class="token-attr">src</span>=<span class="token-val">"image1.jpg"</span>
+  <span class="token-attr">alt</span>=<span class="token-val">"A sample image"</span>
+  <span class="token-attr">width</span>=<span class="token-val">"300"</span>
+  <span class="token-attr">height</span>=<span class="token-val">"200"</span>
+<span class="token-tag">/&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <img src="./images/image1.jpg" alt="A sample image" width="200" style="border-radius:6px;max-width:100%;" />
+          </div>
+        </div>
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>Always include the <code>alt</code> attribute. Screen readers read it aloud for visually impaired users, and it appears in place of the image if the file is missing or the URL is broken.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. figure + figcaption -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <span class="card-title">Figure &amp; Caption — <code style="font-size:0.78rem;">&lt;figure&gt;</code> &amp; <code style="font-size:0.78rem;">&lt;figcaption&gt;</code></span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;figure&gt;</code> element wraps self-contained content like images, diagrams, or code. <code>&lt;figcaption&gt;</code> provides a caption and is placed as the first or last child of <code>&lt;figure&gt;</code>. Together they semantically tie an image to its description.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;figure&gt;</span>
+  <span class="token-tag">&lt;img</span> <span class="token-attr">src</span>=<span class="token-val">"image1.jpg"</span>
+       <span class="token-attr">alt</span>=<span class="token-val">"Subaru Impreza"</span>
+       <span class="token-attr">width</span>=<span class="token-val">"300"</span><span class="token-tag">/&gt;</span>
+  <span class="token-tag">&lt;figcaption&gt;</span>
+    <span class="token-txt">FIGURE CAPTION: Sample image caption.</span>
+  <span class="token-tag">&lt;/figcaption&gt;</span>
+<span class="token-tag">&lt;/figure&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box">
+            <figure>
+              <img src="./images/image1.jpg" alt="Sample image" width="200" style="border-radius:6px;max-width:100%;" />
+              <figcaption><strong>FIGURE CAPTION:</strong> A sample image with a descriptive caption tied using &lt;figure&gt; and &lt;figcaption&gt;.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

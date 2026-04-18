@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finals Activity 2 — Personal Data Sheet | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Finals</a>
+        <span>›</span>
+        <span class="current">Activity 2</span>
+      </div>
+      <span class="act-badge">Activity</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Personal Data Sheet</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Finals Activity 2</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Enrollment Form</span>
+        <span class="pill">Proper Input Types</span>
+        <span class="pill">type="date"</span>
+        <span class="pill">type="email"</span>
+        <span class="pill">type="tel"</span>
+        <span class="pill">Radio Buttons</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Divider ── -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      <span class="divider-text">Activity Output</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Activity instructions callout ── -->
+    <div class="callout">
+      <div class="callout-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+             fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </div>
+      <p><strong>Activity Instructions:</strong> Recreate the Sample University Enrollment Form using proper HTML input types appropriate for each piece of data needed — <code>type="date"</code> for Birthday, <code>type="email"</code> for E-mail, <code>type="tel"</code> for phone numbers, <code>type="number"</code> for Zip Code &amp; Age, <code>type="radio"</code> for exclusive single-select groups (Civil Status, Legal Status, Sex), and <code>type="checkbox"</code> only where multiple selections may genuinely apply.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════════
+         THE FORM
+    ══════════════════════════════════════════ -->
+    <form class="adm-form" action="#" method="post" onsubmit="return false;">
+
+      <!-- ── Form header / university branding ── -->
+      <div class="adm-form-header">
+        <div class="adm-logo-circle">
+          <img src="https://www.ue.edu.ph/mla/wp-content/uploads/2020/12/UE_RED_SEAL_09.png" alt="Sample University Logo">
+        </div>
+
+        <div class="adm-title-block">
+          <div class="adm-univ-name">Sample University</div>
+          <div class="adm-univ-sub">Enrollment System</div>
+          <div class="adm-form-name">Personal Data Sheet</div>
+          <div class="adm-form-type">(Graduate School, Law, Medicine)</div>
+        </div>
+
+        <div class="adm-header-meta">
+          <div class="adm-field">
+            <label class="adm-label" for="program">Program</label>
+            <input class="adm-input" type="text" id="program" name="program" placeholder="e.g. MSIT">
+          </div>
+          <div class="adm-field">
+            <label class="adm-label" for="student-num">Student #</label>
+            <input class="adm-input" type="text" id="student-num" name="student_number" placeholder="e.g. 2024-00001">
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+           SECTION: STUDENT NAME
+      ══════════════════════════════ -->
+      <div class="adm-section">
+        <div class="adm-section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          Student Name
+        </div>
+        <div class="adm-grid-4">
+          <div class="adm-field">
+            <label class="adm-label" for="surname">Surname</label>
+            <input class="adm-input" type="text" id="surname" name="surname" placeholder="Last name" autocomplete="family-name">
+          </div>
+          <div class="adm-field">
+            <label class="adm-label" for="given-name">Given Name</label>
+            <input class="adm-input" type="text" id="given-name" name="given_name" placeholder="First name" autocomplete="given-name">
+          </div>
+          <div class="adm-field">
+            <label class="adm-label" for="middle-name">Middle Name</label>
+            <input class="adm-input" type="text" id="middle-name" name="middle_name" placeholder="Middle name" autocomplete="additional-name">
+          </div>
+          <div class="adm-field">
+            <label class="adm-label" for="aux-name">Auxiliary Name</label>
+            <input class="adm-input" type="text" id="aux-name" name="auxiliary_name" placeholder="Sr, Jr, II…">
+            <span style="font-size:0.58rem;color:#bbb;">(Sr, Jr, I, II, III, etc.)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+           SECTION: STUDENT DETAILS
+      ══════════════════════════════ -->
+      <div class="adm-section">
+        <div class="adm-section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Student Details
+        </div>
+        <div class="adm-stack">
+
+          <!-- City Address -->
+          <div class="adm-field">
+            <label class="adm-label" for="city-addr">City Address</label>
+            <input class="adm-input" type="text" id="city-addr" name="city_address" placeholder="Unit/House No., Street, Barangay, City" autocomplete="street-address">
+          </div>
+
+          <!-- City zip / tel / email -->
+          <div class="adm-grid-3">
+            <div class="adm-field">
+              <label class="adm-label" for="city-zip">Zip Code</label>
+              <!-- type="number" is appropriate for a numeric postal code -->
+              <input class="adm-input" type="number" id="city-zip" name="city_zip" placeholder="0000" min="0" max="9999">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="tel-no">Tel. No.</label>
+              <!-- type="tel" for telephone numbers -->
+              <input class="adm-input" type="tel" id="tel-no" name="telephone" placeholder="(02) 8XXX-XXXX" autocomplete="tel">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="email">E-mail Address</label>
+              <!-- type="email" validates email format -->
+              <input class="adm-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+            </div>
+          </div>
+
+          <!-- Home Address -->
+          <div class="adm-field">
+            <label class="adm-label" for="home-addr">Home Address</label>
+            <input class="adm-input" type="text" id="home-addr" name="home_address" placeholder="Permanent home address if different from city address">
+          </div>
+
+          <!-- Home zip / Region -->
+          <div class="adm-grid-2">
+            <div class="adm-field">
+              <label class="adm-label" for="home-zip">Zip Code</label>
+              <input class="adm-input" type="number" id="home-zip" name="home_zip" placeholder="0000" min="0" max="9999">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="region">Region</label>
+              <input class="adm-input" type="text" id="region" name="region" placeholder="e.g. NCR, Region VII…">
+            </div>
+          </div>
+
+          <!-- Birthday / Age -->
+          <div class="adm-grid-2">
+            <div class="adm-field">
+              <label class="adm-label" for="birthday">Birthday</label>
+              <!-- type="date" gives a proper date picker -->
+              <input class="adm-input" type="date" id="birthday" name="birthday" autocomplete="bday">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="age">Age</label>
+              <!-- type="number" is correct for a numeric age -->
+              <input class="adm-input" type="number" id="age" name="age" placeholder="e.g. 22" min="15" max="100">
+            </div>
+          </div>
+
+          <!-- Birthplace / Religion -->
+          <div class="adm-grid-2">
+            <div class="adm-field">
+              <label class="adm-label" for="birthplace">Birthplace</label>
+              <input class="adm-input" type="text" id="birthplace" name="birthplace" placeholder="City/Municipality, Province">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="religion">Religion</label>
+              <input class="adm-input" type="text" id="religion" name="religion" placeholder="e.g. Roman Catholic">
+            </div>
+          </div>
+
+          <!-- Citizenship / Sex -->
+          <div class="adm-grid-2">
+            <div class="adm-field">
+              <label class="adm-label" for="citizenship">Citizenship</label>
+              <input class="adm-input" type="text" id="citizenship" name="citizenship" placeholder="e.g. Filipino">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="sex">Sex</label>
+              <!-- <select> is better UX than a free-text field for a fixed set of options -->
+              <select class="adm-select" id="sex" name="sex">
+                <option value="" disabled selected>Select…</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="prefer-not">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ACR (Alien only) -->
+          <div class="adm-inline-field">
+            <span>If Alien, ACR # <em style="font-size:0.72rem;color:#aaa;">(see Registrar)</em>:</span>
+            <input class="adm-input" type="text" id="acr" name="acr_number" placeholder="Alien Certificate of Registration #">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+           SECTION: LEGAL & CIVIL STATUS
+      ══════════════════════════════ -->
+      <div class="adm-section">
+        <div class="adm-section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          Legal &amp; Civil Status
+        </div>
+
+        <div class="adm-status-row">
+
+          <!-- Legal Status — radio (only one legal status applies at a time) -->
+          <div>
+            <div class="adm-status-block-title">Legal Status</div>
+            <div class="adm-options">
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="citizen_rp"> Citizen of RP
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="permanent_resident"> Permanent Resident
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="student_visa"> Person granted permission to enter and remain as a student in RP on a visa for a defined period of time
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="dependent_visa"> Person granted permission to enter and remain as a child or spouse of a worker on a visa for a defined period of time
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="other_visa"> Other visa
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="legal_status" value="not_known"> Legal status not known
+              </label>
+            </div>
+          </div>
+
+          <!-- Civil Status — radio (mutually exclusive) + employment -->
+          <div>
+            <div class="adm-status-block-title">Civil Status</div>
+            <div class="adm-options">
+              <label class="adm-option">
+                <input type="radio" name="civil_status" value="single"> Single
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="civil_status" value="married"> Married
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="civil_status" value="divorced"> Divorced
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="civil_status" value="widowed"> Widowed
+              </label>
+              <label class="adm-option">
+                <input type="radio" name="civil_status" value="separated"> Separated
+              </label>
+            </div>
+
+            <!-- Employment status — radio (mutually exclusive) -->
+            <div style="margin-top:1rem;">
+              <div class="adm-status-block-title" style="margin-bottom:0.5rem;">Employment</div>
+              <div class="adm-options-inline">
+                <label class="adm-option">
+                  <input type="radio" name="employment" value="working"> Working
+                </label>
+                <label class="adm-option">
+                  <input type="radio" name="employment" value="not_working"> Not working
+                </label>
+              </div>
+              <div class="adm-field" style="margin-top:0.6rem;">
+                <label class="adm-label" for="office-tel">If working: Office / Business Tel. #</label>
+                <input class="adm-input" type="tel" id="office-tel" name="office_tel" placeholder="(02) 8XXX-XXXX">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+           SECTION: FATHER'S & MOTHER'S INFO
+      ══════════════════════════════ -->
+      <div class="adm-section">
+        <div class="adm-section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Parents' Information
+        </div>
+
+        <div class="adm-parent-grid">
+
+          <!-- Father -->
+          <div class="adm-stack">
+            <div style="font-size:0.68rem;font-weight:700;color:#991b1b;text-transform:uppercase;letter-spacing:0.08em;padding-bottom:0.35rem;border-bottom:1px solid #fecaca;">
+              Father's Information
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-surname">Surname</label>
+              <input class="adm-input" type="text" id="f-surname" name="father_surname" placeholder="Last name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-given">First Name</label>
+              <input class="adm-input" type="text" id="f-given" name="father_given" placeholder="First name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-middle">Middle Name</label>
+              <input class="adm-input" type="text" id="f-middle" name="father_middle" placeholder="Middle name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-aux">Auxiliary Name</label>
+              <input class="adm-input" type="text" id="f-aux" name="father_aux" placeholder="Sr, Jr, II…">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-occ">Occupation / Employment</label>
+              <input class="adm-input" type="text" id="f-occ" name="father_occupation" placeholder="e.g. Engineer, Retired…">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-edu">Educational Attainment</label>
+              <select class="adm-select" id="f-edu" name="father_education">
+                <option value="" disabled selected>Select…</option>
+                <option>Elementary Graduate</option>
+                <option>High School Graduate</option>
+                <option>Some College</option>
+                <option>College Graduate</option>
+                <option>Post-Graduate</option>
+                <option>Vocational / Technical</option>
+              </select>
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-addr">Parent's Address</label>
+              <input class="adm-input" type="text" id="f-addr" name="father_address" placeholder="Street, Barangay, City">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="f-zip">Zip Code</label>
+              <input class="adm-input" type="number" id="f-zip" name="father_zip" placeholder="0000" min="0" max="9999">
+            </div>
+          </div>
+
+          <!-- Mother -->
+          <div class="adm-stack">
+            <div style="font-size:0.68rem;font-weight:700;color:#991b1b;text-transform:uppercase;letter-spacing:0.08em;padding-bottom:0.35rem;border-bottom:1px solid #fecaca;">
+              Mother's Information
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-surname">Surname</label>
+              <input class="adm-input" type="text" id="m-surname" name="mother_surname" placeholder="Last name (maiden name)">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-given">First Name</label>
+              <input class="adm-input" type="text" id="m-given" name="mother_given" placeholder="First name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-middle">Middle Name</label>
+              <input class="adm-input" type="text" id="m-middle" name="mother_middle" placeholder="Middle name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-aux">Auxiliary Name</label>
+              <input class="adm-input" type="text" id="m-aux" name="mother_aux" placeholder="Sr, Jr, II…">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-occ">Occupation / Employment</label>
+              <input class="adm-input" type="text" id="m-occ" name="mother_occupation" placeholder="e.g. Teacher, Homemaker…">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-edu">Educational Attainment</label>
+              <select class="adm-select" id="m-edu" name="mother_education">
+                <option value="" disabled selected>Select…</option>
+                <option>Elementary Graduate</option>
+                <option>High School Graduate</option>
+                <option>Some College</option>
+                <option>College Graduate</option>
+                <option>Post-Graduate</option>
+                <option>Vocational / Technical</option>
+              </select>
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="m-tel">Parent's Tel. #</label>
+              <input class="adm-input" type="tel" id="m-tel" name="mother_tel" placeholder="(02) 8XXX-XXXX or 09XX-XXX-XXXX">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════
+           SECTION: GUARDIAN'S INFO
+      ══════════════════════════════ -->
+      <div class="adm-section">
+        <div class="adm-section-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Guardian's Information
+          <span style="font-weight:400;font-style:italic;font-size:0.6rem;opacity:0.8;">(If Applicable)</span>
+        </div>
+
+        <div class="adm-parent-grid">
+
+          <!-- Guardian left col -->
+          <div class="adm-stack">
+            <div class="adm-field">
+              <label class="adm-label" for="g-surname">Surname</label>
+              <input class="adm-input" type="text" id="g-surname" name="guardian_surname" placeholder="Last name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-given">First Name</label>
+              <input class="adm-input" type="text" id="g-given" name="guardian_given" placeholder="First name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-middle">Middle Name</label>
+              <input class="adm-input" type="text" id="g-middle" name="guardian_middle" placeholder="Middle name">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-aux">Auxiliary Name</label>
+              <input class="adm-input" type="text" id="g-aux" name="guardian_aux" placeholder="Sr, Jr, II…">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-occ">Occupation / Employment</label>
+              <input class="adm-input" type="text" id="g-occ" name="guardian_occupation" placeholder="e.g. Self-employed">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-offtel">Office / Business Tel. #</label>
+              <input class="adm-input" type="tel" id="g-offtel" name="guardian_office_tel" placeholder="(02) 8XXX-XXXX">
+            </div>
+          </div>
+
+          <!-- Guardian right col -->
+          <div class="adm-stack">
+            <div class="adm-field">
+              <label class="adm-label" for="g-addr">Guardian's Address</label>
+              <input class="adm-input" type="text" id="g-addr" name="guardian_address" placeholder="Street, Barangay, City">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-zip">Zip Code</label>
+              <input class="adm-input" type="number" id="g-zip" name="guardian_zip" placeholder="0000" min="0" max="9999">
+            </div>
+            <div class="adm-field">
+              <label class="adm-label" for="g-tel">Tel. #</label>
+              <input class="adm-input" type="tel" id="g-tel" name="guardian_tel" placeholder="09XX-XXX-XXXX">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── Form footer with submit ── -->
+      <div class="adm-form-footer">
+        <button type="reset" class="adm-btn-reset">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/></svg>
+          Clear Form
+        </button>
+        <button type="submit" class="adm-btn-submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 2 11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Submit Form
+        </button>
+      </div>
+
+    </form>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

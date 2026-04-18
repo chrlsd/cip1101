@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 3 — Tables in HTML | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Prelims</a>
+        <span>›</span>
+        <span class="current">Lecture 3</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <!-- Table icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="3" y1="15" x2="21" y2="15"/>
+            <line x1="9" y1="3" x2="9" y2="21"/>
+            <line x1="15" y1="3" x2="15" y2="21"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Tables in HTML</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Lecture 3</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">table</span>
+        <span class="pill">thead &amp; tbody &amp; tfoot</span>
+        <span class="pill">tr</span>
+        <span class="pill">td</span>
+        <span class="pill">th</span>
+        <span class="pill">Demo Table</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+      </svg>
+      <span class="divider-text">Lecture Notes &amp; Examples</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ MAIN ══════════════════════ -->
+  <main>
+
+    <!-- Part heading -->
+    <div class="part-heading">
+      <span class="part-num">Lecture 3</span>
+      <h2>HTML Table Elements</h2>
+    </div>
+
+    <!-- ─── 1. <table> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            <line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;table&gt;</code> — The HTML Table Element</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;table&gt;</code> tag defines an HTML table. An HTML table consists of one
+          <code>&lt;table&gt;</code> element and one or more <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>,
+          and <code>&lt;td&gt;</code> elements.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;th&gt;</span>Name<span class="token-tag">&lt;/th&gt;</span>
+    <span class="token-tag">&lt;th&gt;</span>Score<span class="token-tag">&lt;/th&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Alice<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>95<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Bob<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>88<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <tr><th>Name</th><th>Score</th></tr>
+              <tr><td>Alice</td><td>95</td></tr>
+              <tr><td>Bob</td><td>88</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 2. <thead> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;thead&gt;</code> — Table Head Group</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;thead&gt;</code> tag is used to group header content in an HTML table.
+          It must appear as the first child of a <code>&lt;table&gt;</code> element and wraps one or more
+          <code>&lt;tr&gt;</code> rows that form the column headings.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;thead&gt;</span>
+    <span class="token-tag">&lt;tr&gt;</span>
+      <span class="token-tag">&lt;th&gt;</span>Subject<span class="token-tag">&lt;/th&gt;</span>
+      <span class="token-tag">&lt;th&gt;</span>Units<span class="token-tag">&lt;/th&gt;</span>
+    <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/thead&gt;</span>
+  <span class="token-tag">&lt;tbody&gt;</span>
+    <span class="token-tag">&lt;tr&gt;</span>
+      <span class="token-tag">&lt;td&gt;</span>Web Design<span class="token-tag">&lt;/td&gt;</span>
+      <span class="token-tag">&lt;td&gt;</span>3<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tbody&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <thead><tr><th>Subject</th><th>Units</th></tr></thead>
+              <tbody><tr><td>Web Design</td><td>3</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 3. <tbody> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="3" y1="15" x2="21" y2="15"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;tbody&gt;</code> — Table Body Group</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;tbody&gt;</code> tag is used to group the body content in an HTML table.
+          It separates the main data rows from the header (<code>&lt;thead&gt;</code>) and footer
+          (<code>&lt;tfoot&gt;</code>) sections, and improves browser rendering and accessibility.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;thead&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;th&gt;</span>Item<span class="token-tag">&lt;/th&gt;&lt;th&gt;</span>Price<span class="token-tag">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/thead&gt;</span>
+  <span class="token-tag">&lt;tbody&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Notebook<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;50<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Pen<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;15<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Eraser<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;10<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tbody&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <thead><tr><th>Item</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Notebook</td><td>&#8369;50</td></tr>
+                <tr><td>Pen</td><td>&#8369;15</td></tr>
+                <tr><td>Eraser</td><td>&#8369;10</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 4. <tfoot> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="15" x2="21" y2="15"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;tfoot&gt;</code> — Table Foot Group</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;tfoot&gt;</code> tag is used to group footer content in an HTML table.
+          It typically holds summary rows such as totals or references, and should appear after
+          <code>&lt;tbody&gt;</code> in the source order.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;thead&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;th&gt;</span>Item<span class="token-tag">&lt;/th&gt;&lt;th&gt;</span>Price<span class="token-tag">&lt;/th&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/thead&gt;</span>
+  <span class="token-tag">&lt;tbody&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Notebook<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;50<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Pen<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;15<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tbody&gt;</span>
+  <span class="token-tag">&lt;tfoot&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span>Total<span class="token-tag">&lt;/td&gt;&lt;td&gt;</span>&#8369;65<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tfoot&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <thead><tr><th>Item</th><th>Price</th></tr></thead>
+              <tbody>
+                <tr><td>Notebook</td><td>&#8369;50</td></tr>
+                <tr><td>Pen</td><td>&#8369;15</td></tr>
+              </tbody>
+              <tfoot>
+                <tr><td><strong>Total</strong></td><td><strong>&#8369;65</strong></td></tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 5. <tr> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="9" width="18" height="6" rx="1"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;tr&gt;</code> — Table Row</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;tr&gt;</code> tag defines a row in an HTML table.
+          A <code>&lt;tr&gt;</code> element contains one or more <code>&lt;th&gt;</code> or
+          <code>&lt;td&gt;</code> elements that fill the columns of that row.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>  <span class="token-cmt">&lt;!-- Row 1 --&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Row 1, Col 1<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Row 1, Col 2<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>  <span class="token-cmt">&lt;!-- Row 2 --&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Row 2, Col 1<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Row 2, Col 2<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <tr><td>Row 1, Col 1</td><td>Row 1, Col 2</td></tr>
+              <tr><td>Row 2, Col 1</td><td>Row 2, Col 2</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 6. <td> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <line x1="3" y1="15" x2="21" y2="15"/>
+            <line x1="9" y1="3" x2="9" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;td&gt;</code> — Table Data Cell</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;td&gt;</code> tag defines a standard data cell in an HTML table.
+          The text in <code>&lt;td&gt;</code> elements are <strong>regular weight</strong> and
+          <strong>left-aligned</strong> by default — unlike <code>&lt;th&gt;</code> cells which are bold and centered.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Regular text (default)<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Left-aligned (default)<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <tr><td>Regular text (default)</td><td>Left-aligned (default)</td></tr>
+            </table>
+          </div>
+        </div>
+        <!-- Callout -->
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>Notice that <code>&lt;td&gt;</code> text is plain and flush-left — no bold, no centering. Compare this to <code>&lt;th&gt;</code> in the next card.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── 7. <th> ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+          </svg>
+        </div>
+        <span class="card-title"><code>&lt;th&gt;</code> — Table Header Cell</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The <code>&lt;th&gt;</code> tag (not to be confused with the <code>&lt;thead&gt;</code> tag)
+          defines a <strong>header cell</strong> in an HTML table. The text in <code>&lt;th&gt;</code> elements
+          are <strong>bold</strong> and <strong>centered</strong> by default, visually distinguishing them
+          from data cells.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;th&gt;</span>Bold &amp; Centered (default)<span class="token-tag">&lt;/th&gt;</span>
+    <span class="token-tag">&lt;th&gt;</span>Another Header<span class="token-tag">&lt;/th&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;tr&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Regular &amp; Left-aligned<span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;td&gt;</span>Another Cell<span class="token-tag">&lt;/td&gt;</span>
+  <span class="token-tag">&lt;/tr&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <tr><th>Bold &amp; Centered (default)</th><th>Another Header</th></tr>
+              <tr><td>Regular &amp; Left-aligned</td><td>Another Cell</td></tr>
+            </table>
+          </div>
+        </div>
+        <!-- Callout -->
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p><strong>&lt;thead&gt;</strong> is a <em>grouping</em> element that wraps one or more rows — it has no visual effect by itself. <strong>&lt;th&gt;</strong> is a <em>cell</em> element that makes its content bold and centered. They serve different purposes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Demo part heading ─── -->
+    <div class="part-heading">
+      <span class="part-num">Demo</span>
+      <h2>Full Table Example — Subaru Impreza STi 22B</h2>
+    </div>
+
+    <!-- ─── 8. Demo table ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>
+            <line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title">Complete Table — Using thead, tbody, and tfoot</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The table below combines all seven elements: <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>,
+          <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>,
+          and <code>&lt;th&gt;</code>. Styled via <code>Lect3.css</code>:
+          <code>border: 1px groove black</code> on all table elements.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;table&gt;</span>
+  <span class="token-tag">&lt;thead&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span><span class="token-tag">&lt;b&gt;</span>NAME:<span class="token-tag">&lt;/b&gt;</span> DESUYO, CHARLES IÑIGO G.<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span><span class="token-tag">&lt;b&gt;</span>SECTION:<span class="token-tag">&lt;/b&gt;</span> ITBD<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span><span class="token-tag">&lt;b&gt;</span>DATE TODAY:<span class="token-tag">&lt;/b&gt;</span> 02/05/2026<span class="token-tag">&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/thead&gt;</span>
+  <span class="token-tag">&lt;tbody&gt;</span>
+    <span class="token-tag">&lt;tr&gt;</span>
+      <span class="token-tag">&lt;th</span> <span class="token-attr">style</span>=<span class="token-val">"text-align: center;"</span><span class="token-tag">&gt;</span>Subaru Impreza STi 22B<span class="token-tag">&lt;/th&gt;</span>
+    <span class="token-tag">&lt;/tr&gt;</span>
+    <span class="token-tag">&lt;tr&gt;</span>
+      <span class="token-tag">&lt;td&gt;</span>
+        <span class="token-tag">&lt;figure&gt;</span>
+          <span class="token-tag">&lt;img</span> <span class="token-attr">src</span>=<span class="token-val">"..."</span> <span class="token-attr">alt</span>=<span class="token-val">"Subaru Impreza STi 22B"</span><span class="token-tag">&gt;</span>
+          <span class="token-tag">&lt;figcaption&gt;</span>...<span class="token-tag">&lt;/figcaption&gt;</span>
+        <span class="token-tag">&lt;/figure&gt;</span>
+      <span class="token-tag">&lt;/td&gt;</span>
+    <span class="token-tag">&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tbody&gt;</span>
+  <span class="token-tag">&lt;tfoot&gt;</span>
+    <span class="token-tag">&lt;tr&gt;&lt;td&gt;</span><span class="token-tag">&lt;i&gt;</span>Reference: ...<span class="token-tag">&lt;/i&gt;&lt;/td&gt;&lt;/tr&gt;</span>
+  <span class="token-tag">&lt;/tfoot&gt;</span>
+<span class="token-tag">&lt;/table&gt;</span></pre>
+        </div>
+        <div>
+          <p class="output-label">Output</p>
+          <div class="output-box table-demo">
+            <table>
+              <thead>
+                <tr>
+                  <td><b>NAME:</b> DESUYO, CHARLES IÑIGO G. &nbsp;</td>
+                </tr>
+                <tr>
+                  <td><b>SECTION:</b> ITBD</td>
+                </tr>
+                <tr>
+                  <td><b>DATE TODAY:</b> 02/05/2026</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th style="text-align: center;">Subaru Impreza STi 22B</th>
+                </tr>
+                <tr>
+                  <td>
+                    <figure>
+                      <img src="https://www.topgear.com/sites/default/files/2023/08/1%20Subaru%20Impreza%20STi.jpg?w=892&h=502"
+                           alt="Subaru Impreza STi 22B">
+                      <figcaption>
+                        <b>FIGURE CAPTION: </b>One of the three prototype Subaru Impreza STi 22Bs ever built
+                        has sold for a whopping £480,500. S447 YOX, AKA chassis <b>#000/040</b>, was the late
+                        Colin McRae's whip of choice – "getting him into bother" back when he was making history
+                        in the World Rally Championship in the 1990s.
+                      </figcaption>
+                    </figure>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>
+                    <i>Reference: Gear, T. (2023, August 31). This ex-Colin McRae Subaru Impreza STi 22B has
+                    sold for almost half a mill. Top Gear.
+                    https://www.topgear.com/car-news/retro/ex-colin-mcrae-subaru-impreza-sti-22b-has-sold-almost-half-mill,
+                    W3Schools.com. (n.d.). https://www.w3schools.com/tags/</i>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page footer -->
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+
+</body>
+</html>

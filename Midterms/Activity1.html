@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Midterm Activity 1 — Lists | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <style>
+    .activity-badge {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      color: #a16207;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+    }
+
+    /* ── Nested list demo ── */
+    .list-demo {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
+      color: #111;
+      line-height: 2;
+    }
+    .list-demo > h2 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      color: #111;
+      margin-bottom: 0.75rem;
+    }
+    .list-demo ol,
+    .list-demo ul {
+      padding-left: 2rem;
+      margin: 0;
+      color: #111;
+      font-size: 1rem;
+      line-height: 2;
+    }
+    .list-demo li {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Midterms</a>
+        <span>›</span>
+        <span class="current">Midterm Activity 1</span>
+      </div>
+      <span class="activity-badge">Activity</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Lists</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Midterm Activity 1</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Ordered Lists</span>
+        <span class="pill">Unordered Lists</span>
+        <span class="pill">Nested Lists</span>
+        <span class="pill">type="A"</span>
+        <span class="pill">type="I" &amp; "i"</span>
+        <span class="pill">square &amp; disc</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+        <line x1="8" y1="18" x2="21" y2="18"/>
+        <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+        <line x1="3" y1="18" x2="3.01" y2="18"/>
+      </svg>
+      <span class="divider-text">Nested List Activity Output</span>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Midterm Activity 1</span>
+      <h2>HTML Nested Lists</h2>
+    </div>
+
+    <!-- ─── Live Output ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <span class="card-title">Activity Output</span>
+      </div>
+      <div class="card-body">
+        <p class="output-label">Output</p>
+        <div class="output-box">
+          <div class="list-demo">
+            <h2>LISTS</h2>
+            <ol type="A">
+              <li>Main Topic 1</li>
+              <li>Main Topic 2
+                <ol type="I">
+                  <li>Topic 1</li>
+                  <li>Topic 2
+                    <ul style="list-style-type: square;">
+                      <li>Subtopic 1</li>
+                      <li>Subtopic 2</li>
+                    </ul>
+                  </li>
+                  <li>Topic 3
+                    <ol type="i">
+                      <li>Subtopic 1</li>
+                      <li>Subtopic 2
+                        <ul style="list-style-type: disc;">
+                          <li>Mini Topic 1</li>
+                          <li>Mini Topic 2</li>
+                        </ul>
+                      </li>
+                      <li>Subtopic 3</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li>Main Topic 3</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── HTML Code ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span class="card-title">HTML Code</span>
+      </div>
+      <div class="card-body">
+        <p class="note">
+          The list uses four levels of nesting. Level 1 uses <code>type="A"</code> (uppercase letters). Level 2 uses <code>type="I"</code> (uppercase Roman numerals). Level 3 branches into either a <code>square</code> unordered list or a <code>type="i"</code> ordered list (lowercase Roman). Level 4 uses the default <code>disc</code> unordered list.
+        </p>
+        <div>
+          <p class="code-label">Code</p>
+          <pre><span class="token-tag">&lt;ol</span> <span class="token-attr">type</span>=<span class="token-val">"A"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Main Topic 1</span><span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Main Topic 2</span>
+    <span class="token-tag">&lt;ol</span> <span class="token-attr">type</span>=<span class="token-val">"I"</span><span class="token-tag">&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Topic 1</span><span class="token-tag">&lt;/li&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Topic 2</span>
+        <span class="token-tag">&lt;ul</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: square;"</span><span class="token-tag">&gt;</span>
+          <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Subtopic 1</span><span class="token-tag">&lt;/li&gt;</span>
+          <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Subtopic 2</span><span class="token-tag">&lt;/li&gt;</span>
+        <span class="token-tag">&lt;/ul&gt;</span>
+      <span class="token-tag">&lt;/li&gt;</span>
+      <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Topic 3</span>
+        <span class="token-tag">&lt;ol</span> <span class="token-attr">type</span>=<span class="token-val">"i"</span><span class="token-tag">&gt;</span>
+          <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Subtopic 1</span><span class="token-tag">&lt;/li&gt;</span>
+          <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Subtopic 2</span>
+            <span class="token-tag">&lt;ul</span> <span class="token-attr">style</span>=<span class="token-val">"list-style-type: disc;"</span><span class="token-tag">&gt;</span>
+              <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Mini Topic 1</span><span class="token-tag">&lt;/li&gt;</span>
+              <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Mini Topic 2</span><span class="token-tag">&lt;/li&gt;</span>
+            <span class="token-tag">&lt;/ul&gt;</span>
+          <span class="token-tag">&lt;/li&gt;</span>
+          <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Subtopic 3</span><span class="token-tag">&lt;/li&gt;</span>
+        <span class="token-tag">&lt;/ol&gt;</span>
+      <span class="token-tag">&lt;/li&gt;</span>
+    <span class="token-tag">&lt;/ol&gt;</span>
+  <span class="token-tag">&lt;/li&gt;</span>
+  <span class="token-tag">&lt;li&gt;</span><span class="token-txt">Main Topic 3</span><span class="token-tag">&lt;/li&gt;</span>
+<span class="token-tag">&lt;/ol&gt;</span></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

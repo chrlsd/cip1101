@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prelim Activity 2 — Tags: Web Developer's Page | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <style>
+    /* ── Activity 2 scoped styles ── */
+    .edu-item {
+      background: #fef2f2;
+      border-left: 4px solid #991b1b;
+      border-radius: 0 8px 8px 0;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .edu-item h3 {
+      margin: 0;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+    .edu-item .institution {
+      font-size: 0.78rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    .hobby-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.65rem 0.85rem;
+      background: #fafafa;
+      border-radius: 6px;
+      border: 1px solid #f0ece4;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: #333;
+    }
+    .hobby-item::before {
+      content: '▸';
+      color: #991b1b;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin: 0.25rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.55rem 0.85rem;
+      background: #fafafa;
+      border-radius: 6px;
+      border: 1px solid #f0ece4;
+      margin-bottom: 0.5rem;
+    }
+    .contact-row .contact-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      min-width: 5rem;
+    }
+    .contact-row .contact-value {
+      font-size: 0.85rem;
+      color: #333;
+    }
+
+    .activity-badge {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      color: #a16207;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+      padding: 0.2rem 0.5rem;
+    }
+
+    .body-text {
+      font-size: 0.85rem;
+      color: #444;
+      line-height: 1.75;
+      margin: 0 0 0.75rem 0;
+    }
+    .body-text:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Prelims</a>
+        <span>›</span>
+        <span class="current">Prelim Activity 2</span>
+      </div>
+      <span class="activity-badge">Activity</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <!-- Globe icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Tags — Web Developer's Page</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Prelim Activity 2</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">cidg2004@gmail.com</span>
+        <span class="pill">Pasig, Philippines</span>
+        <span class="pill">github.com/FuZe64</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="2" y1="12" x2="22" y2="12"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span class="divider-text">Developer Biography &amp; Portfolio</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════ MAIN ══════════════════════ -->
+  <main>
+
+    <!-- Part heading -->
+    <div class="part-heading">
+      <span class="part-num">Prelim Activity 2</span>
+      <h2>Developer Biography Page</h2>
+    </div>
+
+    <!-- ─── Introduction ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- User icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <span class="card-title">Introduction</span>
+      </div>
+      <div class="card-body">
+        <p class="body-text">
+          Hello, I'm Charles Desuyo, a System Analyst with a passion for technology and
+          problem-solving. I have a strong background in IT and am currently pursuing my
+          degree in Computer Science at the University of the East.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Biography ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- BookOpen icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <span class="card-title">Biography</span>
+      </div>
+      <div class="card-body">
+        <p class="body-text">
+          I have been a tech enthusiast since my early years, always fascinated by how
+          technology can solve real-world problems. My journey in the IT field has been
+          driven by curiosity and a desire to continuously learn and grow. I enjoy working
+          with various technologies and have developed a strong foundation in system
+          analysis and programming.
+        </p>
+        <p class="body-text">
+          Outside of my professional interests, I am an avid gamer and enjoy sim racing,
+          playing guitar and bass, building PCs, and exploring flight simulators. These
+          hobbies not only provide relaxation but also inspire creativity and strategic
+          thinking in my work.
+        </p>
+      </div>
+    </div>
+
+    <!-- ─── Education ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- GraduationCap icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <span class="card-title">Education</span>
+      </div>
+      <div class="card-body">
+        <div class="edu-item">
+          <h3>Elementary</h3>
+          <span class="institution">Maranatha Christian Academy</span>
+        </div>
+        <div class="edu-item">
+          <h3>High School</h3>
+          <span class="institution">APEC Schools — Pateros</span>
+        </div>
+        <div class="edu-item">
+          <h3>Senior High School</h3>
+          <span class="institution">STI College — Global City</span>
+        </div>
+        <div class="edu-item" style="margin-bottom:0;">
+          <h3>College</h3>
+          <span class="institution">University of the East</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Hobbies ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- Heart icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <span class="card-title">Hobbies &amp; Interests</span>
+      </div>
+      <div class="card-body">
+        <div class="hobby-item">Gaming</div>
+        <div class="hobby-item">Sim Racing</div>
+        <div class="hobby-item">Guitar and Bass Player</div>
+        <div class="hobby-item">PC Building</div>
+        <div class="hobby-item" style="margin-bottom:0;">Flight Sims</div>
+      </div>
+    </div>
+
+    <!-- ─── Skills ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- Wrench icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <span class="card-title">Skills</span>
+      </div>
+      <div class="card-body">
+        <div>
+          <span class="skill-tag">English</span>
+          <span class="skill-tag">Basic Japanese</span>
+          <span class="skill-tag">Basic Spanish</span>
+          <span class="skill-tag">Grit</span>
+          <span class="skill-tag">Cooperative</span>
+          <span class="skill-tag">Multitasker</span>
+          <span class="skill-tag">Active Listener</span>
+          <span class="skill-tag">Analytical</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">C#</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── Contact ─── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <!-- Mail icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <span class="card-title">Contact Information</span>
+      </div>
+      <div class="card-body">
+        <div class="contact-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span class="contact-label">Email</span>
+          <span class="contact-value">cidg2004@gmail.com</span>
+        </div>
+        <div class="contact-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span class="contact-label">Location</span>
+          <span class="contact-value">Pasig, Philippines</span>
+        </div>
+        <div class="contact-row" style="margin-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/FuZe64</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page footer -->
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+
+</body>
+</html>

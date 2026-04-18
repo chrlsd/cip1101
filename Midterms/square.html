@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square — Midterm Activity 3 | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="Activity3.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        ← Back to Lecture
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Midterms</a>
+        <span>›</span>
+        <a href="Activity3.html" style="color:#888;">Activity 3</a>
+        <span>›</span>
+        <span class="current">Square</span>
+      </div>
+      <span class="activity-badge">Activity</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="1"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Web Design &amp; Development</p>
+          <h1 class="header-title">Square</h1>
+          <p class="header-sub">Shape Detail &nbsp;·&nbsp; Midterm Activity 3</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Image Map</span>
+        <span class="pill">shape="rect"</span>
+        <span class="pill">Green · #5ec45e</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="1"/>
+      </svg>
+      <span class="divider-text">Shape Detail Page</span>
+    </div>
+  </div>
+
+  <!-- ── Main content ── -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Activity 3</span>
+      <h2>Image Map — Shape Detail</h2>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="1"/>
+          </svg>
+        </div>
+        <span class="card-title">Square</span>
+      </div>
+      <div class="card-body">
+
+        <div class="shape-display-container">
+          <!-- Base shapes image -->
+          <img
+            src="images/shapes.png"
+            alt="Geometric shapes"
+            width="700"
+            style="position: absolute; top: 0; left: 0; z-index: 1;"
+          >
+          <!-- Highlighted square overlay with glow -->
+          <img
+            src="images/green-square.png"
+            alt="Green square highlighted"
+            width="700"
+            style="position: absolute; top: 0; left: 0; z-index: 2; filter: drop-shadow(0 0 30px #5ec45e) brightness(1.3);"
+          >
+        </div>
+
+        <div class="shape-name square-name">SQUARE</div>
+
+        <div class="shape-description-box">
+          <h2 class="square-h2">You Selected: Square</h2>
+          <p>The square is a rectangle with four equal sides and four right angles. It's one of the most fundamental shapes in geometry.</p>
+          <p class="shape-note">Other shapes are locked. Return to the lecture to select a different shape.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Web Design &amp; Development &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>

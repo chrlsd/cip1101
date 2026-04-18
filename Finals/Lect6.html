@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 6 — Forms &amp; Multimedia | CIP 1101</title>
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── Sticky navbar ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="../index.html" style="color:#991b1b;">Portfolio</a>
+        <span>›</span>
+        <a href="../index.html" style="color:#888;">Finals</a>
+        <span>›</span>
+        <span class="current">Lecture 6</span>
+      </div>
+      <span class="lect-badge">Lecture</span>
+    </div>
+  </nav>
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="header-inner">
+      <div class="header-top">
+        <div class="header-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="5" width="20" height="14" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+        </div>
+        <div>
+          <p class="header-eyebrow">CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1</p>
+          <h1 class="header-title">Forms &amp; Multimedia</h1>
+          <p class="header-sub">Charles Iñigo G. Desuyo &nbsp;·&nbsp; Finals Lecture 6</p>
+        </div>
+      </div>
+      <div class="header-pills">
+        <span class="pill">Web Forms</span>
+        <span class="pill">&lt;form&gt; Tag</span>
+        <span class="pill">Input Types</span>
+        <span class="pill">Select &amp; Textarea</span>
+        <span class="pill">Fieldset</span>
+        <span class="pill">Audio</span>
+        <span class="pill">Video</span>
+        <span class="pill">Multimedia Formats</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Divider ── -->
+  <div class="divider-bar">
+    <div class="divider-inner">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24"
+           fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2"/>
+        <line x1="2" y1="10" x2="22" y2="10"/>
+      </svg>
+      <span class="divider-text">Lecture Notes</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       PART 1 — FORMS
+  ══════════════════════════════════════════════════════ -->
+  <main>
+
+    <div class="part-heading">
+      <span class="part-num">Part 1</span>
+      <h2>HTML Forms</h2>
+    </div>
+
+    <!-- ── 1. Web Forms ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+        </div>
+        <span class="card-title">Web Forms</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Web forms are interactive elements on web pages that allow users to input data — such as text, choices, or selections — and submit it for processing. A form contains <strong>controls</strong> (also called widgets) that let users interact with it.</p>
+
+        <p class="sub-label">Controls</p>
+        <ul class="info-list">
+          <li><strong>Input boxes</strong> — for inserting text strings and numeric values</li>
+          <li><strong>Option buttons (radio buttons)</strong> — for selecting one value from a small set of predefined options</li>
+          <li><strong>Selection lists</strong> — for selecting from a more extensive list of options</li>
+          <li><strong>Check boxes</strong> — for yes/no or on/off selections</li>
+          <li><strong>Text area boxes</strong> — for entering multi-line text content</li>
+        </ul>
+
+        <p class="sub-label">Widgets (HTML5)</p>
+        <ul class="info-list">
+          <li><strong>Spin boxes</strong> — integer values within a specified range</li>
+          <li><strong>Slider controls</strong> — numeric values within a range</li>
+          <li><strong>Calendar controls</strong> — for selecting date and time values</li>
+          <li><strong>Color pickers</strong> — for choosing color values</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- ── 2. The <form> Tag ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <span class="card-title">The &lt;form&gt; Tag &amp; Key Attributes</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Forms are composed of text-input boxes, clickable buttons, checkboxes, pull-down menus, and more — all placed inside the <code>&lt;form&gt;</code> tag.</p>
+
+        <p class="sub-label">action attribute</p>
+        <p class="note">Gives the URL of the application that receives and processes the form's data. If omitted, the action defaults to the current page.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form</span> <span class="token-attr">action</span>=<span class="token-val">"/action_page.php"</span><span class="token-tag">&gt;</span>
+  <span class="token-cmt">&lt;!-- form controls here --&gt;</span>
+<span class="token-tag">&lt;/form&gt;</span></pre>
+
+        <p class="sub-label">method attribute — POST vs GET</p>
+        <p class="note">Sets how the browser sends form data to the server. Two options:</p>
+        <ul class="info-list">
+          <li><strong>GET</strong> — appends form data to the URL. Fast for small forms, but data is visible in the address bar. Not suitable for sensitive information.</li>
+          <li><strong>POST</strong> — sends data in a separate transmission. Better for large forms or sensitive data like passwords. Supports encryption.</li>
+        </ul>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form</span> <span class="token-attr">action</span>=<span class="token-val">"/action_page.php"</span> <span class="token-attr">method</span>=<span class="token-val">"post"</span><span class="token-tag">&gt;&lt;/form&gt;</span>
+<span class="token-tag">&lt;form</span> <span class="token-attr">action</span>=<span class="token-val">"/action_page.php"</span> <span class="token-attr">method</span>=<span class="token-val">"get"</span><span class="token-tag">&gt;&lt;/form&gt;</span></pre>
+
+        <p class="sub-label">name attribute</p>
+        <p class="note">Each input field must have a <code>name</code> attribute to be submitted. If the name attribute is omitted, the data of that field will <strong>not</strong> be sent at all.</p>
+
+      </div>
+    </div>
+
+    <!-- ── 3. Text Input + Label ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 7 4 4 20 4 20 7"/>
+            <line x1="9" y1="20" x2="15" y2="20"/>
+            <line x1="12" y1="4" x2="12" y2="20"/>
+          </svg>
+        </div>
+        <span class="card-title">Text Input &amp; The &lt;label&gt; Element</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note"><code>&lt;input type="text"&gt;</code> defines a one-line text input field. The default width is 20 characters.</p>
+
+        <p class="sub-label">Syntax</p>
+        <pre><span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"text"</span>
+       <span class="token-attr">id</span>=<span class="token-val">"identifier"</span>
+       <span class="token-attr">name</span>=<span class="token-val">"fieldname"</span>
+       <span class="token-attr">placeholder</span>=<span class="token-val">"hint text"</span>
+       <span class="token-attr">size</span>=<span class="token-val">"box-width"</span>
+       <span class="token-attr">maxlength</span>=<span class="token-val">"max-characters"</span><span class="token-tag">&gt;</span></pre>
+
+        <p class="sub-label">The &lt;label&gt; Element</p>
+        <ul class="info-list">
+          <li>Defines a label for a form element — important for screen-reader accessibility.</li>
+          <li>Clicking the label text toggles its linked radio button or checkbox, improving usability for small targets.</li>
+          <li>The <code>for</code> attribute of <code>&lt;label&gt;</code> must match the <code>id</code> of the input to bind them.</li>
+        </ul>
+
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"fname"</span><span class="token-tag">&gt;</span>First name:<span class="token-tag">&lt;/label&gt;</span>
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"text"</span> <span class="token-attr">id</span>=<span class="token-val">"fname"</span> <span class="token-attr">name</span>=<span class="token-val">"firstname"</span> <span class="token-attr">placeholder</span>=<span class="token-val">"Enter first name"</span><span class="token-tag">&gt;</span>
+
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"lname"</span><span class="token-tag">&gt;</span>Last name:<span class="token-tag">&lt;/label&gt;</span>
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"text"</span> <span class="token-attr">id</span>=<span class="token-val">"lname"</span> <span class="token-attr">name</span>=<span class="token-val">"lastname"</span> <span class="token-attr">placeholder</span>=<span class="token-val">"Enter last name"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/form&gt;</span></pre>
+
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-fname">First name:</label>
+            <input type="text" id="demo-fname" name="firstname" placeholder="Enter first name">
+            <label for="demo-lname">Last name:</label>
+            <input type="text" id="demo-lname" name="lastname" placeholder="Enter last name">
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 4. HTML Input Types ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+          </svg>
+        </div>
+        <span class="card-title">HTML Input Types</span>
+      </div>
+      <div class="card-body">
+
+        <!-- Password -->
+        <p class="sub-label">type="password"</p>
+        <p class="note"><code>&lt;input type="password"&gt;</code> masks the characters the user types.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"pwd"</span><span class="token-tag">&gt;</span>Password:<span class="token-tag">&lt;/label&gt;</span>
+<span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"password"</span> <span class="token-attr">id</span>=<span class="token-val">"pwd"</span> <span class="token-attr">name</span>=<span class="token-val">"pwd"</span><span class="token-tag">&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-user">Username:</label>
+            <input type="text" id="demo-user" name="username" placeholder="your username">
+            <label for="demo-pwd">Password:</label>
+            <input type="password" id="demo-pwd" name="pwd" placeholder="••••••••">
+          </form>
+        </div>
+
+        <!-- Radio Buttons -->
+        <p class="sub-label">type="radio"</p>
+        <p class="note">Radio buttons let a user select <strong>only one</strong> option from a group. All buttons in a group share the same <code>name</code>. Add <code>checked</code> to pre-select one.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form&gt;</span>
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"radio"</span> <span class="token-attr">id</span>=<span class="token-val">"male"</span> <span class="token-attr">name</span>=<span class="token-val">"gender"</span> <span class="token-attr">value</span>=<span class="token-val">"male"</span> <span class="token-attr">checked</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"male"</span><span class="token-tag">&gt;</span>Male<span class="token-tag">&lt;/label&gt;</span>
+
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"radio"</span> <span class="token-attr">id</span>=<span class="token-val">"female"</span> <span class="token-attr">name</span>=<span class="token-val">"gender"</span> <span class="token-attr">value</span>=<span class="token-val">"female"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"female"</span><span class="token-tag">&gt;</span>Female<span class="token-tag">&lt;/label&gt;</span>
+
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"radio"</span> <span class="token-attr">id</span>=<span class="token-val">"other"</span> <span class="token-attr">name</span>=<span class="token-val">"gender"</span> <span class="token-attr">value</span>=<span class="token-val">"other"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"other"</span><span class="token-tag">&gt;</span>Other<span class="token-tag">&lt;/label&gt;</span>
+<span class="token-tag">&lt;/form&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label><input type="radio" name="gender" value="male" checked> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+          </form>
+        </div>
+
+        <!-- Checkboxes -->
+        <p class="sub-label">type="checkbox"</p>
+        <p class="note">Checkboxes let a user select <strong>zero or more</strong> options. Unlike radio buttons, multiple checkboxes in a group can all be selected simultaneously.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form&gt;</span>
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"checkbox"</span> <span class="token-attr">id</span>=<span class="token-val">"bike"</span> <span class="token-attr">name</span>=<span class="token-val">"vehicle1"</span> <span class="token-attr">value</span>=<span class="token-val">"Bike"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"bike"</span><span class="token-tag">&gt;</span>I have a bike<span class="token-tag">&lt;/label&gt;</span>
+
+  <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"checkbox"</span> <span class="token-attr">id</span>=<span class="token-val">"car"</span> <span class="token-attr">name</span>=<span class="token-val">"vehicle2"</span> <span class="token-attr">value</span>=<span class="token-val">"Car"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"car"</span><span class="token-tag">&gt;</span>I have a car<span class="token-tag">&lt;/label&gt;</span>
+<span class="token-tag">&lt;/form&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <div><input type="checkbox" id="demo-bike" name="vehicle1" value="Bike">
+            <label for="demo-bike" style="display:inline;"> I have a bike</label></div>
+            <div><input type="checkbox" id="demo-car" name="vehicle2" value="Car">
+            <label for="demo-car" style="display:inline;"> I have a car</label></div>
+            <div><input type="checkbox" id="demo-boat" name="vehicle3" value="Boat">
+            <label for="demo-boat" style="display:inline;"> I have a boat</label></div>
+          </form>
+        </div>
+
+        <!-- Submit & Reset -->
+        <p class="sub-label">type="submit" &amp; type="reset"</p>
+        <p class="note"><code>type="submit"</code> sends the form data to the handler specified in <code>action</code>. <code>type="reset"</code> clears all fields back to their default values.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"submit"</span> <span class="token-attr">value</span>=<span class="token-val">"Submit"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"reset"</span> <span class="token-attr">value</span>=<span class="token-val">"Reset"</span><span class="token-tag">&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-fn2">First name:</label>
+            <input type="text" id="demo-fn2" name="fname" value="Nicole">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </form>
+        </div>
+
+        <!-- HTML5 Color -->
+        <p class="sub-label">HTML5 Input Types</p>
+        <p class="note">HTML5 introduced many new input types including <code>color</code>, <code>date</code>, <code>email</code>, <code>number</code>, <code>range</code>, <code>tel</code>, and more. Browsers that don't support them fall back to <code>type="text"</code>.</p>
+        <div class="code-label">Example — type="color"</div>
+        <pre><span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"favcolor"</span><span class="token-tag">&gt;</span>Pick a color:<span class="token-tag">&lt;/label&gt;</span>
+<span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"color"</span> <span class="token-attr">id</span>=<span class="token-val">"favcolor"</span> <span class="token-attr">name</span>=<span class="token-val">"favcolor"</span><span class="token-tag">&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-color">Pick a color:</label>
+            <input type="color" id="demo-color" name="favcolor" value="#991b1b">
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 5. Input Attributes ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+        </div>
+        <span class="card-title">Key Input Attributes</span>
+      </div>
+      <div class="card-body">
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Attribute</th><th>Description</th><th>Example</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>value</code></td>
+              <td>Sets the initial (default) value of the field.</td>
+              <td><code>value="Nicole"</code></td>
+            </tr>
+            <tr>
+              <td><code>placeholder</code></td>
+              <td>Displays hint text inside the field when empty.</td>
+              <td><code>placeholder="Enter name"</code></td>
+            </tr>
+            <tr>
+              <td><code>readonly</code></td>
+              <td>Field is visible but cannot be edited by the user.</td>
+              <td><code>readonly</code></td>
+            </tr>
+            <tr>
+              <td><code>disabled</code></td>
+              <td>Field is greyed out, unusable, and its value is not submitted.</td>
+              <td><code>disabled</code></td>
+            </tr>
+            <tr>
+              <td><code>size</code></td>
+              <td>Sets the visible width of the input in characters.</td>
+              <td><code>size="30"</code></td>
+            </tr>
+            <tr>
+              <td><code>maxlength</code></td>
+              <td>Limits the maximum number of characters a user can type.</td>
+              <td><code>maxlength="50"</code></td>
+            </tr>
+            <tr>
+              <td><code>required</code></td>
+              <td>Prevents form submission if the field is left empty (HTML5).</td>
+              <td><code>required</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>The difference between <strong>readonly</strong> and <strong>disabled</strong>: readonly fields are still submitted with the form; disabled fields are not sent at all.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 6. Select + Textarea ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </div>
+        <span class="card-title">The &lt;select&gt; Element &amp; &lt;textarea&gt;</span>
+      </div>
+      <div class="card-body">
+
+        <p class="sub-label">&lt;select&gt; — Drop-down List</p>
+        <p class="note">The <code>&lt;select&gt;</code> element creates a drop-down menu. Each <code>&lt;option&gt;</code> defines one item. Add the <code>selected</code> attribute to pre-select an option. Use <code>multiple</code> to allow multiple selections.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;select</span> <span class="token-attr">name</span>=<span class="token-val">"movies"</span> <span class="token-attr">id</span>=<span class="token-val">"movies"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;option</span> <span class="token-attr">value</span>=<span class="token-val">"Ten"</span><span class="token-tag">&gt;</span>Ten Things I Hate About You<span class="token-tag">&lt;/option&gt;</span>
+  <span class="token-tag">&lt;option</span> <span class="token-attr">value</span>=<span class="token-val">"Fifty"</span> <span class="token-attr">selected</span><span class="token-tag">&gt;</span>Fifty First Dates<span class="token-tag">&lt;/option&gt;</span>
+  <span class="token-tag">&lt;option</span> <span class="token-attr">value</span>=<span class="token-val">"Dreams"</span><span class="token-tag">&gt;</span>What Dreams May Come<span class="token-tag">&lt;/option&gt;</span>
+<span class="token-tag">&lt;/select&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-movies">Favorite movie:</label>
+            <select name="movies" id="demo-movies">
+              <option value="Ten">Ten Things I Hate About You</option>
+              <option value="Fifty" selected>Fifty First Dates</option>
+              <option value="Dreams">What Dreams May Come</option>
+            </select>
+          </form>
+        </div>
+
+        <p class="sub-label">&lt;textarea&gt; — Multi-line Input</p>
+        <p class="note">Creates a resizable multi-line text entry area. The <code>rows</code> attribute sets visible lines; <code>cols</code> sets the visible width. You can also control size with CSS.</p>
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;textarea</span> <span class="token-attr">id</span>=<span class="token-val">"message"</span> <span class="token-attr">name</span>=<span class="token-val">"message"</span> <span class="token-attr">rows</span>=<span class="token-val">"4"</span> <span class="token-attr">cols</span>=<span class="token-val">"40"</span><span class="token-tag">&gt;</span>
+  Type your message here...
+<span class="token-tag">&lt;/textarea&gt;</span></pre>
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <label for="demo-msg">Message:</label>
+            <textarea id="demo-msg" name="message" rows="4" style="width:100%;resize:vertical;border:1px solid #d1d5db;border-radius:4px;padding:0.3rem 0.5rem;font-size:0.8rem;font-family:inherit;"></textarea>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 7. Fieldset + Legend ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18"/>
+          </svg>
+        </div>
+        <span class="card-title">The &lt;fieldset&gt; &amp; &lt;legend&gt; Elements</span>
+      </div>
+      <div class="card-body">
+
+        <ul class="info-list">
+          <li><code>&lt;fieldset&gt;</code> groups related form controls together, drawing a visible box around them.</li>
+          <li><code>&lt;legend&gt;</code> defines a caption for the fieldset, displayed at the top-left of the box.</li>
+        </ul>
+
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;form&gt;</span>
+  <span class="token-tag">&lt;fieldset&gt;</span>
+    <span class="token-tag">&lt;legend&gt;</span>Personal Information:<span class="token-tag">&lt;/legend&gt;</span>
+    <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"fname"</span><span class="token-tag">&gt;</span>First name:<span class="token-tag">&lt;/label&gt;</span>
+    <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"text"</span> <span class="token-attr">id</span>=<span class="token-val">"fname"</span> <span class="token-attr">name</span>=<span class="token-val">"fname"</span> <span class="token-attr">value</span>=<span class="token-val">"Nicole"</span><span class="token-tag">&gt;</span>
+    <span class="token-tag">&lt;label</span> <span class="token-attr">for</span>=<span class="token-val">"lname"</span><span class="token-tag">&gt;</span>Last name:<span class="token-tag">&lt;/label&gt;</span>
+    <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"text"</span> <span class="token-attr">id</span>=<span class="token-val">"lname"</span> <span class="token-attr">name</span>=<span class="token-val">"lname"</span> <span class="token-attr">value</span>=<span class="token-val">"Pascual"</span><span class="token-tag">&gt;</span>
+    <span class="token-tag">&lt;input</span> <span class="token-attr">type</span>=<span class="token-val">"submit"</span> <span class="token-attr">value</span>=<span class="token-val">"Submit"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;/fieldset&gt;</span>
+<span class="token-tag">&lt;/form&gt;</span></pre>
+
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <form>
+            <fieldset>
+              <legend>Personal Information:</legend>
+              <label for="demo-fs-fn">First name:</label>
+              <input type="text" id="demo-fs-fn" name="fname" value="Nicole">
+              <label for="demo-fs-ln">Last name:</label>
+              <input type="text" id="demo-fs-ln" name="lname" value="Pascual">
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 8. Creating Effective Forms ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+        </div>
+        <span class="card-title">Creating Effective Forms</span>
+      </div>
+      <div class="card-body">
+
+        <p class="sub-label">Browser Constraints</p>
+        <ul class="info-list">
+          <li>Adjust the size of text-input fields to hint at expected input length (e.g., a 5-character zip code field).</li>
+          <li>Use checkboxes, radio buttons, and selection lists to narrow down user choices where possible.</li>
+        </ul>
+
+        <p class="sub-label">User-Interface Considerations</p>
+        <ul class="info-list">
+          <li>Group related input elements logically so the brain can process the form in chunks.</li>
+          <li>Use consistent, well-written labels to guide the user and reinforce the form's goal.</li>
+          <li>Avoid wide input elements that force horizontal scrolling on small screens.</li>
+        </ul>
+
+        <p class="sub-label">Creating Forms That Flow</p>
+        <p class="note">Lead the user naturally through the process. Ask for the name before the address. Test your form on multiple browsers and have others fill it out to identify pain points.</p>
+
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         PART 2 — MULTIMEDIA
+    ══════════════════════════════════════════════════════ -->
+
+    <div class="part-heading">
+      <span class="part-num">Part 2</span>
+      <h2>HTML Multimedia</h2>
+    </div>
+
+    <!-- ── 9. Multimedia Overview ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <span class="card-title">Multimedia Overview &amp; Formats</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Multimedia on the web includes sound, music, videos, movies, and animations. Multimedia elements are stored in media files identified by their file extensions. Browser support for these formats has evolved significantly — early browsers only supported text, then came colors and images, and eventually audio and video.</p>
+
+        <p class="sub-label">Audio Formats</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Format</th><th>Extension</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MP3</td>
+              <td><code>.mp3</code></td>
+              <td>The most popular audio format for music players. Good compression with high quality. Supported by all browsers.</td>
+            </tr>
+            <tr>
+              <td>MP4</td>
+              <td><code>.mp4</code></td>
+              <td>Primarily a video format, but also supports audio. Automatically supported in all browsers.</td>
+            </tr>
+            <tr>
+              <td>Ogg</td>
+              <td><code>.ogg</code></td>
+              <td>Developed by the Xiph.Org Foundation. Supported by HTML5 browsers (not Safari).</td>
+            </tr>
+            <tr>
+              <td>AAC</td>
+              <td><code>.aac</code></td>
+              <td>Developed by Apple as the default iTunes format. Plays well on Apple devices.</td>
+            </tr>
+            <tr>
+              <td>MIDI</td>
+              <td><code>.mid / .midi</code></td>
+              <td>Stores digital notes for electronic music devices. Does not contain actual recorded sound.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sub-label">Video Formats</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Format</th><th>Extension</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MP4</td>
+              <td><code>.mp4</code></td>
+              <td>The recommended internet video format. Supported by all HTML5 browsers and YouTube. Developed by the Moving Pictures Expert Group.</td>
+            </tr>
+            <tr>
+              <td>WebM</td>
+              <td><code>.webm</code></td>
+              <td>Developed by Mozilla, Opera, Adobe, and Google. Supported by HTML5 (Chrome, Firefox).</td>
+            </tr>
+            <tr>
+              <td>Ogg</td>
+              <td><code>.ogg</code></td>
+              <td>Developed by Xiph.Org Foundation. Supported by HTML5 (Chrome, Firefox).</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 10. Audio Element ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <span class="card-title">The HTML &lt;audio&gt; Element</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Before HTML5, audio required a browser plug-in (like Flash). The <code>&lt;audio&gt;</code> element provides a standard way to embed audio directly in a web page.</p>
+
+        <ul class="info-list">
+          <li>The <code>controls</code> attribute adds a play/pause/volume interface to the page.</li>
+          <li>The <code>&lt;source&gt;</code> element lets you specify multiple audio files — the browser picks the first format it supports.</li>
+          <li>Text between <code>&lt;audio&gt;</code> and <code>&lt;/audio&gt;</code> only displays in browsers that don't support the element.</li>
+        </ul>
+
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;audio</span> <span class="token-attr">controls</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"audio/RememberMe.mp3"</span> <span class="token-attr">type</span>=<span class="token-val">"audio/mpeg"</span><span class="token-tag">&gt;</span>
+  Your browser does not support the audio element.
+<span class="token-tag">&lt;/audio&gt;</span></pre>
+
+        <p class="sub-label">Browser Support</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Browser</th><th>MP3</th><th>WAV</th><th>Ogg</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chrome</td><td class="yes">YES</td><td class="yes">YES</td><td class="yes">YES</td></tr>
+            <tr><td>Firefox</td><td class="yes">YES</td><td class="yes">YES</td><td class="yes">YES</td></tr>
+            <tr><td>Safari</td><td class="yes">YES</td><td class="yes">YES</td><td class="no">NO</td></tr>
+            <tr><td>Internet Explorer</td><td class="yes">YES</td><td class="no">NO</td><td class="no">NO</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 11. Video Element ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <span class="card-title">The HTML &lt;video&gt; Element</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">The HTML5 <code>&lt;video&gt;</code> element embeds video directly in a web page without plugins. MP4 is the recommended format as it is supported by all HTML5 browsers and YouTube.</p>
+
+        <ul class="info-list">
+          <li>Always include <code>width</code> and <code>height</code> attributes to prevent the page from flickering while the video loads.</li>
+          <li>The <code>controls</code> attribute adds play, pause, and volume controls.</li>
+          <li>Add <code>autoplay</code> to start the video automatically — note it does not work on mobile devices.</li>
+          <li>Use multiple <code>&lt;source&gt;</code> elements to provide fallback formats.</li>
+        </ul>
+
+        <div class="code-label">Example</div>
+        <pre><span class="token-tag">&lt;video</span> <span class="token-attr">width</span>=<span class="token-val">"320"</span> <span class="token-attr">height</span>=<span class="token-val">"240"</span> <span class="token-attr">controls</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/Feast.mp4"</span> <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/Feast.webm"</span> <span class="token-attr">type</span>=<span class="token-val">"video/webm"</span><span class="token-tag">&gt;</span>
+  Your browser does not support the video tag.
+<span class="token-tag">&lt;/video&gt;</span></pre>
+
+        <div class="code-label">Autoplay Example</div>
+        <pre><span class="token-tag">&lt;video</span> <span class="token-attr">width</span>=<span class="token-val">"320"</span> <span class="token-attr">height</span>=<span class="token-val">"240"</span> <span class="token-attr">autoplay</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"movie.mp4"</span> <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/video&gt;</span></pre>
+
+        <p class="sub-label">Browser Support</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Browser</th><th>MP4</th><th>WebM</th><th>Ogg</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Chrome</td><td class="yes">YES</td><td class="yes">YES</td><td class="yes">YES</td></tr>
+            <tr><td>Firefox</td><td class="yes">YES</td><td class="yes">YES</td><td class="yes">YES</td></tr>
+            <tr><td>Safari</td><td class="yes">YES</td><td class="no">NO</td><td class="no">NO</td></tr>
+            <tr><td>Internet Explorer</td><td class="yes">YES</td><td class="no">NO</td><td class="no">NO</td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <!-- ── 12. Live Music Player ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13"/>
+            <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+          </svg>
+        </div>
+        <span class="card-title">Live Music Player Demo</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">The browser's built-in audio player renders automatically when <code>controls</code> is present. It includes a play/pause button, a scrubber, current time, duration, and a volume knob — no JavaScript needed.</p>
+
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;audio</span> <span class="token-attr">controls</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"audio/horse.mp3"</span> <span class="token-attr">type</span>=<span class="token-val">"audio/mpeg"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"audio/horse.ogg"</span> <span class="token-attr">type</span>=<span class="token-val">"audio/ogg"</span><span class="token-tag">&gt;</span>
+  Your browser does not support the audio element.
+<span class="token-tag">&lt;/audio&gt;</span></pre>
+
+        <div class="output-label">Live Output — click &#9654; to play</div>
+        <div class="output-box">
+          <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+          <p style="font-size:0.72rem;color:#aaa;margin-top:0.4rem;">
+            Sample: horse.mp3 — sourced from W3Schools public demo files
+          </p>
+        </div>
+
+        <p class="sub-label">Adding Multiple Sources</p>
+        <p class="note">Always list <strong>MP3 first</strong> (supported by every browser), followed by Ogg as a fallback for older Firefox/Opera versions. The browser stops at the first format it recognises.</p>
+
+      </div>
+    </div>
+
+    <!-- ── 13. Playback Attributes ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </div>
+        <span class="card-title">Audio &amp; Video Playback Attributes</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Both <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> share a common set of playback attributes that control how media behaves when the page loads.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr><th>Attribute</th><th>Applies To</th><th>Effect</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>controls</code></td>
+              <td>audio, video</td>
+              <td>Displays the browser's default player UI (play, pause, volume, scrubber).</td>
+            </tr>
+            <tr>
+              <td><code>autoplay</code></td>
+              <td>audio, video</td>
+              <td>Starts playback automatically when the page loads. Modern browsers block this unless <code>muted</code> is also set.</td>
+            </tr>
+            <tr>
+              <td><code>muted</code></td>
+              <td>audio, video</td>
+              <td>Mutes the media on load. Required by most browsers to allow <code>autoplay</code>.</td>
+            </tr>
+            <tr>
+              <td><code>loop</code></td>
+              <td>audio, video</td>
+              <td>Restarts playback from the beginning when it reaches the end.</td>
+            </tr>
+            <tr>
+              <td><code>poster</code></td>
+              <td>video only</td>
+              <td>Sets a still image to display before the video starts (like a thumbnail).</td>
+            </tr>
+            <tr>
+              <td><code>preload</code></td>
+              <td>audio, video</td>
+              <td>Hints to the browser whether to load the file on page load. Values: <code>none</code>, <code>metadata</code>, <code>auto</code>.</td>
+            </tr>
+            <tr>
+              <td><code>width</code> / <code>height</code></td>
+              <td>video only</td>
+              <td>Sets the pixel dimensions of the video box. Always include to prevent page reflow while loading.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="sub-label">Autoplay + Muted + Loop Example</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;video</span> <span class="token-attr">width</span>=<span class="token-val">"320"</span> <span class="token-attr">height</span>=<span class="token-val">"240"</span>
+       <span class="token-attr">autoplay</span> <span class="token-attr">muted</span> <span class="token-attr">loop</span>
+       <span class="token-attr">poster</span>=<span class="token-val">"images/thumbnail.jpg"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/clip.mp4"</span> <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/video&gt;</span></pre>
+
+        <div class="callout">
+          <div class="callout-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <p>Browsers like Chrome and Firefox block <code>autoplay</code> with sound to prevent surprise audio. Always pair <code>autoplay</code> with <code>muted</code> if you want it to work reliably — this is the standard pattern for hero background videos.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── 14. Live Video Player ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <span class="card-title">Live Video Player Demo</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">The <code>&lt;video&gt;</code> element renders the browser's native video player — includes play/pause, fullscreen, volume, picture-in-picture, and a progress bar, all for free via the <code>controls</code> attribute.</p>
+
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;video</span> <span class="token-attr">width</span>=<span class="token-val">"400"</span> <span class="token-attr">controls</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/bbb.mp4"</span>  <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/bbb.webm"</span> <span class="token-attr">type</span>=<span class="token-val">"video/webm"</span><span class="token-tag">&gt;</span>
+  Your browser does not support the video tag.
+<span class="token-tag">&lt;/video&gt;</span></pre>
+
+        <div class="output-label">Live Output — click &#9654; to play</div>
+        <div class="output-box">
+          <video width="100%" controls style="border-radius:8px;background:#000;">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <p style="font-size:0.72rem;color:#aaa;margin-top:0.5rem;">
+            Sample: Big Buck Bunny clip (mov_bbb.mp4) — sourced from W3Schools public demo files
+          </p>
+        </div>
+
+        <p class="sub-label">With Poster Image</p>
+        <p class="note">The <code>poster</code> attribute displays a custom thumbnail before the user presses play — exactly like a YouTube thumbnail. Without it, the browser shows the first frame of the video (or a blank black box while loading).</p>
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;video</span> <span class="token-attr">width</span>=<span class="token-val">"400"</span> <span class="token-attr">controls</span>
+       <span class="token-attr">poster</span>=<span class="token-val">"images/video-thumbnail.jpg"</span><span class="token-tag">&gt;</span>
+  <span class="token-tag">&lt;source</span> <span class="token-attr">src</span>=<span class="token-val">"video/clip.mp4"</span> <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/video&gt;</span></pre>
+
+      </div>
+    </div>
+
+    <!-- ── 15. YouTube / iframe Embed ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <span class="card-title">Embedding YouTube with &lt;iframe&gt;</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">You cannot embed a YouTube video using <code>&lt;video&gt;</code> — YouTube serves its own player. Instead, use an <code>&lt;iframe&gt;</code> with the special <strong>embed URL</strong> found under <em>Share &rsaquo; Embed</em> on any YouTube video.</p>
+
+        <p class="sub-label">Embed URL Format</p>
+        <p class="note">Replace the normal watch URL <code>youtube.com/watch?v=ID</code> with the embed version: <code>youtube.com/embed/ID</code>. The video ID is the string after <code>v=</code> in the standard URL.</p>
+
+        <div class="code-label">Code</div>
+        <pre><span class="token-tag">&lt;iframe</span>
+  <span class="token-attr">width</span>=<span class="token-val">"560"</span>
+  <span class="token-attr">height</span>=<span class="token-val">"315"</span>
+  <span class="token-attr">src</span>=<span class="token-val">"https://www.youtube.com/embed/tgbNymZ7vqY"</span>
+  <span class="token-attr">title</span>=<span class="token-val">"YouTube video player"</span>
+  <span class="token-attr">allowfullscreen</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/iframe&gt;</span></pre>
+
+        <div class="output-label">Live Output</div>
+        <div class="output-box">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="border-radius:8px;border:none;">
+          </iframe>
+          <p style="font-size:0.72rem;color:#aaa;margin-top:0.5rem;">
+            iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          </p>
+        </div>
+
+        <p class="sub-label">Useful YouTube Embed Parameters</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Parameter</th><th>Example</th><th>Effect</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>autoplay</code></td>
+              <td><code>?autoplay=1</code></td>
+              <td>Starts the video automatically (requires <code>mute=1</code> in most browsers).</td>
+            </tr>
+            <tr>
+              <td><code>mute</code></td>
+              <td><code>&amp;mute=1</code></td>
+              <td>Mutes the video on load.</td>
+            </tr>
+            <tr>
+              <td><code>loop</code></td>
+              <td><code>&amp;loop=1</code></td>
+              <td>Loops the video continuously.</td>
+            </tr>
+            <tr>
+              <td><code>controls</code></td>
+              <td><code>&amp;controls=0</code></td>
+              <td>Hides the YouTube player controls (0 = hidden).</td>
+            </tr>
+            <tr>
+              <td><code>start</code></td>
+              <td><code>&amp;start=30</code></td>
+              <td>Starts playback at the given number of seconds.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="code-label">Example with Parameters</div>
+        <pre><span class="token-tag">&lt;iframe</span>
+  <span class="token-attr">src</span>=<span class="token-val">"https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&amp;mute=1&amp;loop=1"</span>
+  <span class="token-attr">width</span>=<span class="token-val">"560"</span> <span class="token-attr">height</span>=<span class="token-val">"315"</span> <span class="token-attr">allowfullscreen</span><span class="token-tag">&gt;</span>
+<span class="token-tag">&lt;/iframe&gt;</span></pre>
+
+      </div>
+    </div>
+
+    <!-- ── 16. HTML Helpers — Object & Embed ── -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+               fill="none" stroke="#991b1b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <span class="card-title">HTML Helpers — &lt;object&gt; &amp; &lt;embed&gt;</span>
+      </div>
+      <div class="card-body">
+
+        <p class="note">Before <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> existed, developers used <strong>helper applications</strong> (plug-ins like Flash) to play media. Two HTML elements activate them.</p>
+
+        <p class="sub-label">The &lt;object&gt; Element</p>
+        <p class="note">The original way to embed external content — PDFs, Flash, audio, video, and even other web pages. The <code>data</code> attribute points to the file; <code>type</code> declares the MIME type. Content placed <em>inside</em> the tags serves as fallback if the browser cannot render the object.</p>
+        <div class="code-label">Syntax</div>
+        <pre><span class="token-tag">&lt;object</span> <span class="token-attr">data</span>=<span class="token-val">"filename.ext"</span> <span class="token-attr">type</span>=<span class="token-val">"MIME/type"</span>
+        <span class="token-attr">width</span>=<span class="token-val">"400"</span> <span class="token-attr">height</span>=<span class="token-val">"300"</span><span class="token-tag">&gt;</span>
+  Fallback content shown if the browser cannot display the object.
+<span class="token-tag">&lt;/object&gt;</span></pre>
+        <div class="code-label">Examples</div>
+        <pre><span class="token-cmt">&lt;!-- Embed a PDF --&gt;</span>
+<span class="token-tag">&lt;object</span> <span class="token-attr">data</span>=<span class="token-val">"report.pdf"</span> <span class="token-attr">type</span>=<span class="token-val">"application/pdf"</span> <span class="token-attr">width</span>=<span class="token-val">"600"</span> <span class="token-attr">height</span>=<span class="token-val">"400"</span><span class="token-tag">&gt;&lt;/object&gt;</span>
+
+<span class="token-cmt">&lt;!-- Embed an audio file --&gt;</span>
+<span class="token-tag">&lt;object</span> <span class="token-attr">data</span>=<span class="token-val">"audio/horse.mp3"</span> <span class="token-attr">type</span>=<span class="token-val">"audio/mpeg"</span><span class="token-tag">&gt;&lt;/object&gt;</span></pre>
+
+        <p class="sub-label">The &lt;embed&gt; Element</p>
+        <p class="note"><code>&lt;embed&gt;</code> is a self-closing alternative to <code>&lt;object&gt;</code>. It has no closing tag and no fallback content. Originally a non-standard extension, it is now officially part of HTML5.</p>
+        <div class="code-label">Syntax</div>
+        <pre><span class="token-tag">&lt;embed</span> <span class="token-attr">src</span>=<span class="token-val">"filename.ext"</span> <span class="token-attr">type</span>=<span class="token-val">"MIME/type"</span>
+       <span class="token-attr">width</span>=<span class="token-val">"400"</span> <span class="token-attr">height</span>=<span class="token-val">"300"</span><span class="token-tag">&gt;</span></pre>
+        <div class="code-label">Examples</div>
+        <pre><span class="token-cmt">&lt;!-- Embed an audio file --&gt;</span>
+<span class="token-tag">&lt;embed</span> <span class="token-attr">src</span>=<span class="token-val">"audio/horse.mp3"</span> <span class="token-attr">type</span>=<span class="token-val">"audio/mpeg"</span><span class="token-tag">&gt;</span>
+
+<span class="token-cmt">&lt;!-- Embed a video file --&gt;</span>
+<span class="token-tag">&lt;embed</span> <span class="token-attr">src</span>=<span class="token-val">"video/movie.mp4"</span> <span class="token-attr">type</span>=<span class="token-val">"video/mp4"</span>
+       <span class="token-attr">width</span>=<span class="token-val">"400"</span> <span class="token-attr">height</span>=<span class="token-val">"300"</span><span class="token-tag">&gt;</span></pre>
+
+        <p class="sub-label">Comparison — All Embedding Methods</p>
+        <table class="data-table">
+          <thead>
+            <tr><th>Element</th><th>Fallback Content</th><th>Self-closing</th><th>Best Used For</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>&lt;audio&gt;</code></td>
+              <td class="yes">YES</td>
+              <td class="no">NO</td>
+              <td>Music, sound effects, podcasts</td>
+            </tr>
+            <tr>
+              <td><code>&lt;video&gt;</code></td>
+              <td class="yes">YES</td>
+              <td class="no">NO</td>
+              <td>Video files hosted on your own server</td>
+            </tr>
+            <tr>
+              <td><code>&lt;iframe&gt;</code></td>
+              <td class="yes">YES</td>
+              <td class="no">NO</td>
+              <td>YouTube, Google Maps, external content</td>
+            </tr>
+            <tr>
+              <td><code>&lt;object&gt;</code></td>
+              <td class="yes">YES</td>
+              <td class="no">NO</td>
+              <td>PDFs, legacy plug-in content</td>
+            </tr>
+            <tr>
+              <td><code>&lt;embed&gt;</code></td>
+              <td class="no">NO</td>
+              <td class="yes">YES</td>
+              <td>Simple plug-in embeds; legacy use</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <p>CIP 1101 &nbsp;·&nbsp; Integrative Programming and Technologies 1 &nbsp;·&nbsp; Charles Iñigo G. Desuyo</p>
+    </div>
+
+  </main>
+</body>
+</html>
